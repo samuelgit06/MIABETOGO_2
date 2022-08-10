@@ -1,5 +1,6 @@
 @extends('layouts.apps')
-@section('content')<!doctype html>
+@section('content')
+<!doctype html>
 <html lang="fr">
   <head>
     <!-- Required meta tags -->

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class service_de_location extends Model
+class LouerMaison extends Model
 {
     use HasFactory;
 }

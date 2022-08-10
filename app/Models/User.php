@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\App;
 use Laravel\Sanctum\HasApiTokens;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -43,8 +44,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
     public function roles()
     {
-        return $this->belongsToMany('App\Role');
+        return $this->belongsToMany(Role::class);
+    }
+
+    protected $table = 'users';
+    protected $primaryKey ='id';
+    public function etablissements(){
+        return $this->hasMany(etablissement::class);
     }
 }

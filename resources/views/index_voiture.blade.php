@@ -1,3 +1,5 @@
+@extends('layouts.apps')
+@section('content')
 <!doctype html>
 <html lang="fr">
   <head>
@@ -16,16 +18,16 @@
 <!--w3l-header-->
 
 <header class="w3l-header-nav">
-	<!--/nav-->
+	<!--/nav
 	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 		<div class="container">
             <h4>MIABETOGO</h4>
-			<!--<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index.html">
 				<img alt="Your logo" style="height:35px;" /> Hotels</a>
 			 if logo is image enable this   
 						<a class="navbar-brand" href="#index.html">
 							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-						</a> -->
+						</a> 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -36,9 +38,9 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="{{ URL:: to ('/')}}">Home</a>
 					</li>
-				<!--	<li class="nav-item @@about__active">
+					<li class="nav-item @@about__active">
 						<a class="nav-link" href="{{ URL:: to ('/about')}}">About</a>
-					</li>-->
+					</li>
 					<li class="nav-item @@about__active">
 						<a class="nav-link" href="{{ URL:: to ('/services')}}">Gallerie</a>
 					</li>
@@ -49,7 +51,7 @@
 			</div>
 		</div>
 	</nav>
-	<!--//nav-->
+	-->
 </header>
 <section class="w3l-availability-form" id="booking">
   <!-- /w3l-availability-form-section -->
@@ -345,3 +347,4 @@ $(function () {
 </body>
 
 </html>
+@endsection()

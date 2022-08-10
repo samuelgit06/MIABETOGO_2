@@ -10,6 +10,7 @@
                 <table style="border: 2px solid black;" class="container">
                 <thead>
                 <tr style="height:50px;">
+                    <th>id</th>
                     <th>Nom</th>
                     <th>E-mail</th>
                     <th>Opérations</th>
@@ -21,21 +22,22 @@
 
                     <tbody>
                         <tr>
-                            <td style="border: 1px solid black;"> {{$users->name}}</td>
+                            <th scope="row">{{ $users->id}}</th>
+                            <td style="border: 1px solid black; "> {{$users->name}}</td>
                             <td style="border: 1px solid black;"> {{$users->email}}</td>
 
-                            <td style="border: 1px solid black;">
-                                <div>
-                                    <a href="{{ ('#')}}">
+                            
+                               <td style="border: 1px solid black;"> <div>
+                                    <a href="{{ (route('admin.user.edit',$users->id))}}">
                                         <button style="background-color: green; color:aliceblue; height:35px; width: 100px; border-radius:5px;"><i class="fa fa-pencil"></i><span> Modifier</span></button>
                                     </a>
-                                </div>
-                                <div>
-                                    <a href="{{ ('#')}}">
+                                </div></td>
+                               <td style="border: 1px solid black;"> <div>
+                                    <a href="{{ (route('admin.user.destroy',$users->id))}}">
                                         <button style="background-color: red; color:aliceblue; height:35px; width: 100px; border-radius:5px;"><i class="fa fa-trash-o"></i><span> Supprimer</span></button>
                                     </a>
-                                </div>
-                            </td>
+                                </div></td>
+                            
                         </tr>
                     </tbody>
                         

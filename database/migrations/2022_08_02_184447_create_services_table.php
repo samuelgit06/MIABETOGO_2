@@ -14,7 +14,7 @@ class CreateServicesTable extends Migration
     public function up()
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id('id_serv');
+            $table->id();
             $table->string('nom_serv');
             $table->string('note_serv');
             $table->string('image_serv');

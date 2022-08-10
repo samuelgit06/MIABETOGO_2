@@ -1,3 +1,5 @@
+@extends('layouts.apps')
+@section('content')
 <!doctype html>
 <html lang="fr">
   <head>
@@ -16,7 +18,7 @@
 <!--w3l-header-->
 
 <header class="w3l-header-nav">
-	<!--/nav-->
+	<!--
 	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 		<div class="container">
             <h4>MIABETOGO</h4>
@@ -30,12 +32,12 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="{{ URL:: to ('/')}}">Acceuil</a>
 					</li>
-				<!--	<li class="nav-item @@about__active">
+					<li class="nav-item @@about__active">
 						<a class="nav-link" href="{{ URL:: to ('/about')}}">About</a>
 					</li>
 					<li class="nav-item @@services__active">
 						<a class="nav-link" href="{{ URL:: to ('/services')}}">Services</a>
-					</li>-->
+					</li>
           <li class="nav-item @@about__active">
 						<a class="nav-link" href="{{ URL:: to ('/services')}}">Gallerie</a>
 					</li>
@@ -46,17 +48,18 @@
 			</div>
 		</div>
 	</nav>
-	<!--//nav-->
+	nav-->
 </header>
-
-<section class="w3l-availability-form" id="booking">
+<section class="w3l-availability-form" id="booking" >
     <div class="w3l-availability-form-main py-5">
         <div class="container pt-lg-3 pb-lg-5">
             <div class="forms-top">
                 <div class="form-right">
                     <div class="form-inner-cont">
                      <center>   <h3 class="title-small">verifier les disponibiltés  des guides touristiques </h3></center>
+                     <br>
                      <hr noshade width="400" size="3">
+                     <br>
                      <form action="search-results.html" method="post" class="signin-form">
                         <br>
                         <center><h5>Budget</h5></center>
@@ -332,3 +335,5 @@
   </body>
   
   </html>
+  @endsection()
+  

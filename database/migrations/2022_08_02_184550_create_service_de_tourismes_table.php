@@ -14,7 +14,7 @@ class CreateServiceDeTourismesTable extends Migration
     public function up()
     {
         Schema::create('service_de_tourismes', function (Blueprint $table) {
-            $table->id('id_tour');
+            $table->id();
             $table->string('activite');
             $table->string('montant_jour');
            // $table->primary('id_tour');

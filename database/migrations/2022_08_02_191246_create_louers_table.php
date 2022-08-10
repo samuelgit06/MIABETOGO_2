@@ -14,14 +14,8 @@ class CreateLouersTable extends Migration
     public function up()
     {
         Schema::create('louers', function (Blueprint $table) {
-            $table->id('id_loue');
-            //$table->unsignedBigInteger('id_voit');
-           // $table->unsignedBigInteger('id_client');
-          // $table->foreign('id_client')->references('id_client')->on('client');
-        // $table->foreign('id_voit')->references('id_voit')->on('voiture');
-           //$table->foreignId('voiture')->constrained();
-          // $table->foreignId('client')->constrained();
-//$table->primary('id_loue');
+            $table->increments('id');
+            $table->date('date_loc');
             $table->timestamps();
         });
     }

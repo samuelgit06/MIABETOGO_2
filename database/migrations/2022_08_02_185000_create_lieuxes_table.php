@@ -14,7 +14,7 @@ class CreateLieuxesTable extends Migration
     public function up()
     {
         Schema::create('lieuxes', function (Blueprint $table) {
-            $table->id('id_lieux');
+            $table->id();
             $table->timestamps();
             //$table->primary('id_lieux');
         });

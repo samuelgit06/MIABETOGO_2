@@ -14,7 +14,7 @@ class CreateServiceDeLocationsTable extends Migration
     public function up()
     {
         Schema::create('service_de_locations', function (Blueprint $table) {
-            $table->id('id_serv_loc');
+            $table->id();
           //  $table->primary('id_serv_loc');
             $table->timestamps();
         });
