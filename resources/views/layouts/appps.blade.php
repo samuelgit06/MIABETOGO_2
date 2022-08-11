@@ -22,18 +22,6 @@
 </head>
 <body>
     <div id="app">
-       <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                <h2>MIABETOGO</h2>
-                </a>
-            </div>  
-          <!--  <ul class="navbar-nav ms-auto">
-				<li class="nav-item active">
-						<a class="nav-link" href="{{ URL:: to ('/')}}">Acceuil</a>
-					</li>
-			
-			</div>-->
 		</div>
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -48,19 +36,6 @@
              <ul class="navbar-nav me-auto">
 
                 </ul>
-
-                <!-- Right Side Of Navbar -->
-                <!--<ul class="navbar-nav ms-auto">
-                  
-
-    
-        
-            <li class="nav-item active">
-                    <a class="nav-link" href="{{ URL:: to ('/')}}">Acceuil</a>
-                </li>
-            </ul>
-            
-        </ul>-->
         </div>
     </div>
 	</nav>

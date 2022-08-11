@@ -50,6 +50,6 @@ Route::get('/reservation', function () {
 
 
 Route::get('admin/user', [UserController::class, 'index']);
-Route::namespace('App\Http\Controllers\admin')->prefix('admin')->name('admin.')->group(function(){
+Route::namespace('App\Http\Controllers\admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('user','UserController');
 });

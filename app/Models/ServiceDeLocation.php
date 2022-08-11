@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ServiceDeLocation extends Model
+class ServiceDeLocation extends service
 {
-    use HasFactory;
+  use child;
 }
