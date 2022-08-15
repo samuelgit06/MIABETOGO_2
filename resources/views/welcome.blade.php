@@ -92,7 +92,7 @@
                                  <div class="banner-info-bg">
                                      <h5>visiter des meilleurs endroits au togo 
                                      </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/tourisme')}}">en savoir plus </a>
+                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/lieux')}}">en savoir plus </a>
                                  </div>
                              </div>
                          </div>
@@ -129,7 +129,7 @@
           <div class="row">
               <div class="col-lg-6 left-wthree-img text-righ">
                   <div class="position-relative">
-                      <img src="images/videobg.jpg" alt="" class="img-fluid" />
+                      <img src="images/mowokitours_20220510_p_2835024246573947552_2_2835024236407070286.jpg" alt="" class="img-fluid" />
                       <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
                           <span class="video-play-icon">
                               <span class="fa fa-play"></span>
@@ -137,7 +137,7 @@
                       </a>
                       <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                          <iframe src="https://player.vimeo.com/video/246941769" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+                        <iframe src="https://player.vimeo.com/video/739375380?h=9939fde628&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="480" height="600" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="mowokitours_20220506_p_2832400543763678545_5_2832398834995989274"></iframe>
                       </div>
                   </div>
               </div>
@@ -145,13 +145,7 @@
                   <h6>Decouvrir le TOGO </h6>
                   <h3 class="title-big">Faites vous accompagner par les services de tourisme sur la place pour visiter les meilleurs places au togo</h3>
                   <p class="mt-3"></p>
-                  <ul class="w3l-right-book mt-4">
-                      <li><span class="fa fa-check" aria-hidden="true"></span>We make the best for all our customers</li>
-                      <li><span class="fa fa-check" aria-hidden="true"></span>Follow our Resort Luxury Hotels</li>
-                      <li><span class="fa fa-check" aria-hidden="true"></span>Luxury hotels and best resorts</li>
-                      <li><span class="fa fa-check" aria-hidden="true"></span>Double rooms and family rooms</li>
-                  </ul>
-                  <a href="{{ URL:: to ('/tourisme')}}"class="btn btn-style btn-primary mt-4">Check all packages</a>
+                  <a href="{{ URL:: to ('/lieux')}}"class="btn btn-style btn-primary mt-4">Visiter</a>
               </div>
           </div>
       </div>
@@ -175,8 +169,7 @@
                     </figure>
                     <div class="room-info">
                         <h3 class="room-title"><a  ref="{{ URL:: to ('/index-voiture')}}" >mailleurs tarifs de location </a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A recusandae, illum sequi numquam
-                            tempora voluptates?</p>
+                        <p></p>
                         <a href="{{ URL:: to ('/index-voiture')}}" class="btn btn-style btn-primary mt-sm-4 mt-3"> voir plus </a>
                     </div>
                 </div>

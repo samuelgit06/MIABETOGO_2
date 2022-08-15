@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class maison extends Model
+class maison extends etablissement
 {
-    use HasFactory;
+    use childetablisssment;
 }

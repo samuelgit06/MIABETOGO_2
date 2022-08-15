@@ -95,20 +95,21 @@
                                                         <div class="form-right">
                                                             <div class="form-inner-cont">
                                                                           
-                                                                      <form action="#" method="#" class="signin-form">
+                                                                      <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form">
+                                                                        @csrf
                                                                             <br>
                                                                             <center><h5>Nom de l'hotel</h5></center>
                                                                             <br>
                                                                               <div class="row book-form ">
                                                                                   <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                      <input type="text" name="Nom" placeholder="Nom" required="true" />
+                                                                                      <input type="text" name="Nom" placeholder="Nom" required />
                                                                                   </div>
                                                                               </div>
                                                                           <br>
                                                                           <center><h5>Description</h5></center>
                                                                           <br>
                                                                             <div class="row book-form mb-3">
-                                                                                  <textarea name="Description"  id="message"cols="10" rows="5" class="form-control"></textarea>
+                                                                                  <textarea name="Desc_eta"  id="message"cols="10" rows="5" class="form-control" required></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         <br>
@@ -117,16 +118,20 @@
                                                                           <div class="row book-form">
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                               <label> Adresse Mail </label><br>
-                                                                               <input type="text" name="mail" placeholder="Mail" required />
+                                                                               <input type="text" name="mail_eta" placeholder="Mail"/>
                                                                            </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                   <label> Adresse </label>
-                                                                                  <input type="text" name="Addresse" placeholder="Adresse/localisation" required />
+                                                                                  <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
                                                                               </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                 <label> Numero de téléphone</label>
-                                                                                <input type="number" name="numero" placeholder="Numero de Teléphone" required />
+                                                                                <input type="text" name="num_etablissment" placeholder="Numero de Teléphone" required />
                                                                             </div> 
+                                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
+                                                                              <label>Site Web</label>
+                                                                              <input type="text" name="lien_web_eta" placeholder="Site Web" />
+                                                                          </div>
                                                                             
                                                                           </div>
                                                                         <br>
@@ -135,43 +140,26 @@
                                                                           <div class="row book-form">
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                   <label> Prix maximun </label>
-                                                                                  <input type="text" name="prx_min" placeholder="Max Price" required />
+                                                                                  <input type="text" name="prx_max" placeholder="Max Price" required />
                                                                               </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                 <label> prix minimum </label>
-                                                                                <input type="text" name="prix_max" placeholder="Min Price" required />
+                                                                                <input type="text" name="prix_min" placeholder="Min Price" required />
                                                                             </div> 
                                                                           </div>
                                                                         <br>
-                                                                      <!--  <center><h5>Ajouter une chambre </h5></center>
-                                                                        <br>
-                                                                          <div class="row book-form">
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                  <label>Nombre de lit </label>
-                                                                                  <input type="number" name="nombre_lit" placeholder="nombre lit" required="true"/>
-                                                                              </div>
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                <label> Autre caracteristiques </label>
-                                                                                <input type="text" name="caracteristiques" placeholder="caracteristiques " required />
-                                                                            </div> 
-                                                                            <div class="row book-form">
-                                                                              <div class="form-input col-4">
-                                                                                  <input type="file" name="" placeholder="" required />
-                                                                              </div>
-                                                                          </div>
-                                                                          </div>-->
                                                                         <br>
                                                                         <center><h5>Ajouter des images de l'hotel </h5></center>
                                                                         <br>
                                                                           <div class="row book-form">
                                                                               <div class="form-input col-4">
-                                                                                  <input type="file" name="" placeholder="" required />
+                                                                                  <input type="file" name="images" placeholder="images" required />
                                                                               </div>
                                                                           </div>
                                                                           <br>
                                                                     <div class="row book-form">
                                                                     <div>
-                                                                      <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="enregistrer ">
+                                                                      <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">Enregistrer</button>
                                                                     </div>
                                                                   <!--  <div>
                                                                     <a  href="{{ URL:: to ('/user_page')}}"> <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="modifier"></a> 
@@ -203,14 +191,15 @@
                                                 <div class="forms-top">
                                                   <div class="form-right">
                                                     <div class="form-inner-cont">
-                                                        <form action="#" method="#" class="signin-form">
+                                                        <form action="#" method="POST" class="signin-form">
+                                                          @csrf
                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                                             </div >
                                                             <br>
                                                             <center><h5>Description</h5></center>
                                                                           <br>
                                                                             <div class="row book-form mb-3">
-                                                                                  <textarea name="Description"  id="message"cols="10" rows="5" class="form-control"></textarea>
+                                                                                  <textarea name="Desc_eta"  id="message"cols="10" rows="5" class="form-control"></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         <br>
@@ -224,12 +213,16 @@
                                                              </div>
                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                 <label> Adresse </label>
-                                                                <input type="text" name="Addresse" placeholder="Adresse/localisation" required />
+                                                                <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
                                                               </div>
                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                 <label> Numero de telephone</label>
-                                                                <input type="number" name="numero" placeholder="Numero de Teléphone" required />
+                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone" required />
                                                               </div>  
+                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
+                                                                <label>Site Web</label>
+                                                                <input type="text" name="lien_web_eta" placeholder="Site Web" />
+                                                            </div>
                                                             </div>
                                                           <br>
                                                           <center><h5>Budget</h5></center>
@@ -242,33 +235,24 @@
                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                               <label> prix minimum </label>
                                                               <input type="text" name="prix_max" placeholder="Min Price" required />
-                                                            </div> 
-                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label>montant par jour </label>
-                                                              <input type="number" name="numero" placeholder="montant " required />
-                                                            </div>
+                                                              </di>
                                                             </div>
                                                           <br>
                                                           <center><h5>Ajouter des images</h5></center>
                                                           <br>
                                                             <div class="row book-form">
                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <input type="file" name="prx_min" placeholder="Max Price" required />
+                                                                <input type="file" name="images" placeholder="Max Price" required />
                                                               </div>
                                                             </div>
                                                             <br>
                                                             <div class="row book-form">
-                                                            <div>
-                                                              <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="enregistrer ">
+                                                              <div>
+                                                                <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">Enregistrer</button>
+                                                              </div>
                                                             </div>
-                                                           <!-- <div>
-                                                            <a  href="{{ URL:: to ('/user_page')}}"> <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="modifier"></a> 
-                                                            </div>-->
-                                                            </div>
-                                                        
                                                           </div>
                                                         </div>
-                                                   
                                                     </form>
                                                     </div>
                                                   </div>
@@ -293,7 +277,8 @@
                                                 <div class="forms-top">
                                                   <div class="form-right">
                                                     <div class="form-inner-cont">
-                                                            <form action="#" method="#" class="signin-form">
+                                                            <form action="#" method="POST" class="signin-form">
+                                                              @csrf
                                                             <br>
                                                             <center><h5>Nom du service de tourisme </h5></center>
                                                             <br>

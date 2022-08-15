@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\etablissement;
+use App\Http\Controllers\EtablissementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+
 require __DIR__.'/auth.php';
 Route::get('/ajout_etablissement', function () {
     return view('ajout_etablissement');
@@ -32,8 +36,11 @@ Route::get('/index_voiture', function () {
 Route::get('/verifier', function () {
     return view('verifier');
 });
-Route::get('/pricing', function () {
-    return view('locations_voiture.pricing');
+Route::get('/enregistrement ', function () {
+    return view('enregistrement');
+});
+Route::get('/lieux', function () {
+    return view('lieux');
 });
 Route::get('/tourisme', function () {
     return view('index_tourisme ');
