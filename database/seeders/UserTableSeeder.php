@@ -18,18 +18,18 @@ class UserTableSeeder extends Seeder
 
       $admin =  User::create([
             'name'=>'admin',
-            'email'=>'admin@admin.com',
+            'email'=>'administrateur@admin.com',
             'passord'=>Hash::make('password')
         ]);
 
         $auteur = User::create([
-            'name'=>'admin',
+            'name'=>'auterur',
             'email'=>'auteur@auteur.com',
             'passord'=>Hash::make('password')
         ]);
 
         $utilisateur = User::create([
-            'name'=>'admin',
+            'name'=>'utilisateur',
             'email'=>'utilisateur@utilisateur.com',
             'passord'=>Hash::make('password')
         ]);

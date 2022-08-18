@@ -47,7 +47,18 @@
                                                 this.closest('form').submit();">
                                 {{ __('Se déconnecter') }}
                             </x-dropdown-link>
+                          @can('edit-users')
+                              
+                          
+                           <a class="dropdown-item" href="{{route('admin.user.index')}}">Liste des utilisateurs</a>
+                           @endcan
+                           @can('edit-users')
+                              
+                          
+                           <a class="dropdown-item" href="{{route('EtablissementController.index')}}">Liste des enregistrements</a>
+                           @endcan
                         </form>
+                        
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -89,6 +100,7 @@
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
+                    
                 </form>
                
             </div>

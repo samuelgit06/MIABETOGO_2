@@ -15,82 +15,56 @@
     <link rel="stylesheet" href="css/style-starter.css">
   </head>
   <body>
-<!--w3l-header-->
-
-<!--<header class="w3l-header-nav">
-
-	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
-		<div class="container">
-            <h4>MIABETOGO</h4>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="{{ URL:: to ('/index')}}">Home</a>
-					</li>-->
-				<!--	<li class="nav-item @@about__active">
-						<a class="nav-link" href="{{ URL:: to ('/about')}}">About</a>
-					</li>
-					<li class="nav-item @@services__active">
-						<a class="nav-link" href="{{ URL:: to ('/services')}}">Services</a>
-					</li>
-          <li class="nav-item @@about__active">
-						<a class="nav-link" href="{{ URL:: to ('/services')}}">Gallerie</a>
-					</li>
-					
-				</ul>
-				<a href="{{ URL:: to ('/login')}}" class="ml-3 book btn btn-secondary btn-style">connecter vous</a>
-        <a href="{{ URL:: to ('/ajout_etablissement')}}" class="ml-3 book btn btn-secondary btn-style">ajouter un etablissement</a>
-			</div>
-		</div>
-	</nav>
--->
 </header>
 <section class="w3l-breadcrumb">
     <div class="breadcrum-bg py-sm-5 py-4">
         <div class="container py-lg-3">
             <h2>Logement disponible</h2>
         </div>
-    </div>
+      </div>
+    <table style="margin: auto">
+      <tr>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><td>
+    <td><div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></td>
+  </tr>
+    </table>
 </section>
 <hr>
-<section></section>
-<section class="w3l-breadcrumb">
-    <div class="breadcrum-bg py-sm-5 py-4">
-        <div class="container py-lg-3">
-            <h2>voitures a louer disponible </h2>
-        </div>
-    </div>
-</section>
-<hr>
-<section></section>
-<section class="w3l-breadcrumb">
-    <div class="breadcrum-bg py-sm-5 py-4">
-        <div class="container py-lg-3">
-            <h2>Guide et services de tourisme diponible</h2>
-        </div>
-    </div>
-</section>
-<section></section>
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
       <div class="container py-lg-4">
         <div class="row footer-top-29">
           <div class="col-lg-3 col-md-6 col-sm-8 footer-list-29 footer-1">
-           <!--  <h6 class="footer-title-29">Contact Us</h6>
-           <ul>
-              <li>
-                <p><span class="fa fa-map-marker"></span> Luxury hotel, #32841 block, #221DRS Rental & Paid rooms
-                  business, UK.</p>
-              </li>
-              <li><a href="tel:+7-800-999-800"><span class="fa fa-phone"></span> +(21)-255-999-8888</a></li>
-              <li><a href="mailto:hotels@mail.com" class="mail"><span class="fa fa-envelope-open-o"></span>
-                  hotels@mail.com</a></li>
-            </ul>-->
           </div>
           <div class="col-lg-2 col-md-6 col-sm-4 footer-list-29 footer-2 mt-sm-0 mt-5">
   

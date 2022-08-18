@@ -5,8 +5,9 @@ namespace App\Http\Controllers\admin;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Models\Etablissement;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Database\Seeds\DatabaseSeeder;
 
@@ -25,6 +26,8 @@ class UserController extends Controller
     {
         $users=User::all();
         return view('admin.user') -> with('users',$users);
+
+       
     }
 
     /**

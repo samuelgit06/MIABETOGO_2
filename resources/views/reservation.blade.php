@@ -47,26 +47,24 @@
                 <div class="form-right">
                     <div class="form-inner-cont">
                      <center>   <h3 class="title-small">verifier les disponibiltés </h3></center>
-                     <hr noshade width="400" size="3">
-                          <br>
-                          <div class="row book-form" >
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                              <!--doit provenir de la base de donnees -->
-                              <label>types de logement</label>
-                                <select class="selectpicker">
-                                  <option>Maison</option>
-                                
-                                    <option>chambre d'Hotel</option>
-                                    
-                                </select>
-                            </div>
-                          </div>
-                          <hr>
+                     <hr> 
                         <form action="search-results.html" method="post" class="signin-form">
                           <br>
+                          @csrf
+                          <div class="form-input col-md-4 col-sm-6 mt-3">
+                           <label>Type d'etablissement</label>
+                             <select class="selectpicker" name="type_eta">
+                                 <option value="Maison">Maison</option>
+                                 <option value="Hotel">Hotel</option>
+                                 <option value="Appartement"> Appartement</option>
+                                 <option value="Service de tourisme ">Service de tourisme</option>
+                                 <option value="Service de location">Service de Location</option>
+                             </select>
+
+                           </div>
                           <center><h5>Budget</h5></center>
                           <br>
-                            <div class="row book-form">
+                            <div class="row book-form" style="margin: auto">
                                 <div class="form-input col-md-4 col-sm-6 mt-3">
                                     <label> Prix maximun </label>
                                     <input type="text" name="prx_min" placeholder="Max Price" required />
@@ -77,92 +75,10 @@
                               </div> 
                             </div>
                             <hr>
-                            <br>
-                           <center> <h5>Date</h5></center>
-                           <br>
-                            <div class="row book-form">
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label>Date de debut </label>
-                                  <input type="date" name="date_min" placeholder="Date" required="">
-                              </div>
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label>Date de fin </label>
-                                  <input type="date" name="date_max" placeholder="Date" required="">
-                              </div>
-                          </div>
-                          <hr>
-                          <br>
-                         <center> <h5>Nombre de personnes</h5></center>
-                          <br>
-                          <div class="row book-form">
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Nombre d'adultes </label>
-                                <input type="texte" name="adultes" placeholder="" required="false">
-                            </div>
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Nombre d'enfants </label>
-                                <input type="texte" name="enfant" placeholder="" required="false">
-                            </div>
-                        </div>
-                          <hr>
-                          <br><br>
-                          <center> <h5>voulez vous louer une voiture ?</h5></center>
-                           <br>    
-                            <div class="row book-form">
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label>Type de voitures </label>
-                                 <!-- provenir de la bas de donnees -->
-                                <!--  <select class="selectpicker">
-                                      <option>SUV</option>
-                                      <option>berline</option>
-                                      <option>Coupé</option>
-                                      <option>van</option>
-                                  </select>-->
-                              </div>
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label>Nombre de jours </label>
-                                  <select class="selectpicker">
-                                      <option>01</option>
-                                      <option>02</option>
-                                      <option>03</option>
-                                      <option>04</option>
-                                      <option>05</option>
-                                      <option>06</option>
-                                      <option>une semaine </option>
-                                      <option>deux semaines</option>
-                                      <option>un mois </option>
-                                      <option>deux mois </option>
-                                      <option>trois mois </option>
-                                  </select>
-                              </div>
-                        </div>
-                        <hr>
-                        <br>
-                          <center> <h5>vous aviez besoin d'un guide touristique ?</h5></center>
-                           <br>    
-                           <div class="row book-form">
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label>Nombre de jours </label>
-                                 <select class="selectpicker">
-                                      <option>01</option>
-                                      <option>02</option>
-                                      <option>03</option>
-                                      <option>04</option>
-                                      <option>05</option>
-                                      <option>06</option>
-                                      <option>une semaine </option>
-                                      <option>deux semaines</option>
-                                      <option>un mois </option>
-                                      <option>deux mois </option>
-                                      <option>trois mois </option>
-                                  </select>
-                              </div>
-                        </div>
-                        <hr>
-                        <br>
-                        <div>
-                          <a href="{{ URL:: to ('/verifier')}}" ><button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Verifier </button></a>
+                           <div>
+                         <center>   <a href="{{ URL:: to ('/verfier')}}" class="btn btn-primary">Verifier</a></center>
+                              
+                           </div>
                         </div>
                         </form>
                     </div>
@@ -171,53 +87,47 @@
         </div>
     </div>
 </section>
-<div class="row mt-5">
-  <div class="maghny-gd-1 col-lg-4 col-md-6">
-      <div class="maghny-grid">
-          <figure class="effect-lily border-radius">
-              <img class="img-fluid" src="images/about1.jpg">
-              <figcaption class="w3set-hny">
-                  <div>
-                      <h4>Top Restaurant <span> Hotels</span></h4>
-                      <p>Breakfast and Dinner</p>
-                  </div>
-
-              </figcaption>
-          </figure>
+<section>
+  <section class="w3l-breadcrumb">
+    <table style="margin: auto">
+      <tr>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-  </div>
-  <div class="maghny-gd-1 col-lg-4 col-md-6 mt-md-0 mt-4">
-      <div class="maghny-grid">
-          <figure class="effect-lily border-radius">
-              <img class="img-fluid" src="images/about2.jpg">
-              <figcaption class="w3set-hny">
-                  <div>
-                      <h4>Spa and Wellness <span> Hotels</span></h4>
-                      <p>Open Daily </p>
-                  </div>
-
-              </figcaption>
-          </figure>
+    </div></td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-  </div>
-  <div class="maghny-gd-1 col-lg-4 col-md-6 mt-lg-0 mt-4">
-      <div class="maghny-grid">
-          <figure class="effect-lily border-radius">
-              <img class="img-fluid" src="images/about3.jpg">
-              <figcaption class="w3set-hny">
-                  <div>
-                      <h4>Best Luxury Rooms <span> Hotels</span></h4>
-                      <p>Cool view </p>
-                  </div>
-
-              </figcaption>
-          </figure>
+    </div><td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
+    </div><td>
+    <td><div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></td>
+  </tr>
+    </table>
+<section>
+    
+
 <section class="w3l-footer-29-main">
   <div class="footer-29 py-5">
     <div class="container py-lg-4">

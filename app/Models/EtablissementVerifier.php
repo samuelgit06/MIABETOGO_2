@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Arr;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use phpDocumentor\Reflection\Types\This;
+use Illuminate\Database\Eloquent\Model;
 
-class Etablissement extends Model
+class EtablissementVerifier extends Model
 {
- 
     
     protected $fillable=[
-      'Nom',
+        'Nom',
       'Desc_eta',
        'local_eta' ,
        'mail_eta',
@@ -22,13 +19,6 @@ class Etablissement extends Model
        'prix_max',
        'prix_min',
        'type_eta',
-       'user_id'  ,         
-    ];
- 
-
-
-  
-   
-
-   
+       'user_id'         
+];
 }

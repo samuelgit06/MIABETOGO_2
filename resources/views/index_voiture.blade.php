@@ -53,6 +53,11 @@
 	</nav>
 	-->
 </header>
+<section>
+  <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
+    trouvez des services en fonction de votre budget
+  </h5>
+</section>
 <section class="w3l-availability-form" id="booking">
   <!-- /w3l-availability-form-section -->
   <div class="w3l-availability-form-main py-5">
@@ -60,9 +65,9 @@
           <div class="forms-top">
               <div class="form-right">
                   <div class="form-inner-cont">
-                   <center>   <h3 class="title-small">Verifier la disponibiié des voitures a louer </h3></center>
+                   
                       <form action="search-results.html" method="post" class="signin-form">
-                        <hr noshade width="400" size="3">
+                        <hr>
                         <br>
                         <center><h5>Prix</h5></center>
                         <br>
@@ -76,9 +81,12 @@
                                 <input type="text" name="" placeholder="Min Price" required />
                             </div> 
                           </div>
-                          <hr>
-                          <br>
-                         <center> <h5>Date</h5></center>
+                      <br>
+                      <br>
+                      <div >
+                        <center><button class="btn btn-style btn-primary ">verifier </button></center>
+                   </div>
+                       <!--  <center> <h5>Date</h5></center>
                          <br>
                           <div class="row book-form">
                             <div class="form-input col-md-4 col-sm-6 mt-3">
@@ -89,10 +97,10 @@
                                 <label>Date de fin </label>
                                 <input type="date" name="" placeholder="Date" required="">
                             </div>
-                          </div>
-                          <hr>
-                         <br>    
-                          <div class="row book-form">
+                          </div>-->
+                          
+                         
+                         <!-- <div class="row book-form">
                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                 <label>Type de voitures </label>
                                 <select class="selectpicker">
@@ -119,20 +127,55 @@
                                 </select>
                             </div>
                             
-                      </div>
-                      <hr>
-                      <div class="row book-form">
-                            <div class="bottom-btn col-md-4 col-sm-6 mt-3">
-                                <center><button class="btn btn-style btn-primary w-100 px-2">verifier </button></center>
-                           </div>
-                      </div>
-                    
+                      </div>-->
+                  
+                     
+                           
                       </form>
                   </div>
               </div>
           </div>
       </div>
   </div>
+</section>
+
+<section class="w3l-breadcrumb">
+  <table style="margin: auto">
+    <tr>
+ <td> <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div></td>
+ <td> <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div><td>
+ <td> <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div><td>
+  <td><div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div></td>
+</tr>
+  </table>
 </section>
 <section class="w3l-footer-29-main">
   <div class="footer-29 py-5">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\etablissement;
 use App\Http\Controllers\EtablissementController;
+use App\Http\Controllers\EVController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-
+//Route::post('/dashboard', [etablissement::class,'create'])->name('create');
+Route::resource('EtablissementController',EtablissementController::class);
+Route::resource('EVController',EVController::class);
 
 require __DIR__.'/auth.php';
 Route::get('/ajout_etablissement', function () {
@@ -60,3 +63,7 @@ Route::get('admin/user', [UserController::class, 'index']);
 Route::namespace('App\Http\Controllers\admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('user','UserController');
 });
+Route::get('admin/etablissement', [EtablissementController::class, 'index']);
+
+
+

@@ -53,10 +53,7 @@ class User extends Authenticatable
 
     protected $table = 'users';
     protected $primaryKey ='id';
-    public function etablissements(){
-        return $this->hasMany(etablissement::class);
-    }
-
+    
     public function isAdmin(){
        return $this->roles()->where('name','admin')->first();
     }

@@ -6,7 +6,7 @@
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <title >MIABETOGO</title>
     <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
    <!-- Css Styles -->
@@ -22,7 +22,7 @@
   <body>
 <section>
     <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
-        faites vous visiter les beaux lieux au TOGO grace au services de tourismes !
+      visiter les beaux lieux au TOGO grace au services de tourismes !
     </h5>
   </section>
   <br>
@@ -35,34 +35,39 @@
                 <div class="recipe-item">
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/mowokitours_20220510_p_2835024246573947552_2_2835024236407070286.jpg" alt=""></a>
                     <div class="ri-text">
-                        <br>
+                        <br><a href="{{ URL:: to ('/tourisme')}}">
                             <h4>Le mont agou</h4>
-                        <br>
-                        <p></p>
+                            </a>
+                        <p>le mont Agou est le plus haut sommet du TOGO,culminant a 986 metres d'altitude, il se situe entre Amoussoukope et Kpalime </p>
+                        
+                      
                     </div>
                 </div>
             </div>
+            <hr>
             <div class="col-lg-4 col-sm-6">
                 <div class="recipe-item">
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/sarakawa.jpg" alt=""></a>
                     <div class="ri-text">
                         <br>
-                            <h4>Parc Sarakawa , Nord Togo</h4>
-                        <br>
-                        <p></p>
+                        <a href="{{ URL:: to ('/tourisme')}}">
+                            <h4>La réserve de faune du Sarakawa</h4>
+                        </a>
+                        <p>Cette réserve  récemment ouverte au public ,es safaris découverte sont organisés à la rencontre de la faune sauvage africaine.On peut entre autre y apercevoir des zèbres, des Cobs, des bubales et bien d'autres espèces animales encore.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="recipe-item">
-                    <a href="#]{{ URL:: to ('/tourisme')}}"><img src="images/igbames.jpg" alt=""></a>
+                    <a href="{{ URL:: to ('/tourisme')}}"><img src="images/igbames.jpg" alt=""></a>
                     <div class="ri-text">
-                        
-                        <a href="#">
-                            <h4>Pya village de kara </h4>
+                        <br>
+                        <a href="{{ URL:: to ('/tourisme')}}">
+                            <h4>Marche d'igname village de bassar  </h4>
                         </a>
-                        <p></p>
-                    </div>
+                        <p> 
+                          Dominée par des montagnes arides, sillonnée de rivières, la région de Bassar offre de splendides panoramas sur une zone de savanes arborées.il est organisé chqaue premier samedi de mois de septembre la fête des ignames, "D'pontr/N'dack" ,qui marque en pays Bassar le début d'une nouvelle année.</p>                
+                          </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
@@ -70,10 +75,10 @@
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/timberma.jpg" alt=""></a>
                     <div class="ri-text">
                         
-                        <a href="#">
+                        <a href="{{ URL:: to ('/tourisme')}}">
                             <h4>Les tamberma</h4>
                         </a>
-                        <p</p>
+                        <p>"Les Tambermas, dont le nom signifie " les vrais architectes de la terre ", originaires de Dinaba au Burkina-Faso, sont chasseurs, agriculteurs, éleveurs qui vivent dans la région de la Kara</p>
                     </div>
                 </div>
             </div>
@@ -81,18 +86,20 @@
                 <div class="recipe-item">
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/case.jpg" alt=""></a>
                     <div class="ri-text">
+                      <a href=" {{ URL:: to ('/tourisme')}}">
                         <h4>les tata tamberma</h4>
-                        
-                        <p></p>
+                      </a>  
+                        <p>Le pays Tamberma est caractérisé par ses habitations de terre. Il s'agit de grosses constructions cylindriques appelées tatas.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="recipe-item">
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/Aledjo.jpg" alt=""></a>
-                    <div class="ri-text">
+                    <div class="ri-text"><a href="{{ URL:: to ('/tourisme')}}"> 
                             <h4>Faille d'aledjo</h4>
-                        <p></p>
+                            </a>
+                        <p>La faille d'Aledjo est une curiosité géologique en plein sur la nationale 1. Entre deux rochers, tailladés comme d'un gigantesque coup de machette, on a fait passer une route à voie unique, utilisée dans le sens descendant.</p>
                     </div>
                 </div>
             </div>

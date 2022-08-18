@@ -1,12 +1,11 @@
 <?php
 
 use App\Models\User;
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Validation\Rules\Unique;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class Etablissement extends Migration
+class CreateEtablissementVerifiersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +14,7 @@ class Etablissement extends Migration
      */
     public function up()
     {
-        Schema::create('etablissements', function (Blueprint $table) {
+        Schema::create('etablissement_verifiers', function (Blueprint $table) {
             $table->id();
             $table-> string('Nom')->nullable(true);
             $table-> text('Desc_eta');
@@ -40,6 +39,6 @@ class Etablissement extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Etablissement');
+        Schema::dropIfExists('etablissement_verifiers');
     }
 }

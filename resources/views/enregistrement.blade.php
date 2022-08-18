@@ -63,17 +63,27 @@
                     
                       </head>
                       <br>
-                      <br>
-                      <br>
                       <body>
                         <section>
-                            <h4 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family: Elephant; font-size:26px; text-align:center;">
+                            <h4 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
                             Vos informations on bien été enregistrés ils seront verifier puis publié sur la platforme.
                             </h4>
+
                         </section>
-                        <br>
-                        <br>
-                        <br>
+                        <center> <section  style=" margin-top:-15em">
+                          <div class="product-section mt-150 mb-150">
+                                <div class="container">
+                        
+                                    <div class="row">
+                                        <div class="col-md-15">
+                                            <div class="product-filters">
+                                                <ul>
+                                                 ><li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/dashboard')}}">Retourner sur la page d'enregistrement</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                      </div>
+                           </section></center>
                         <section class="w3l-footer-29-main">
                             <div class="footer-29 py-5">
                               <div class="container py-lg-4">

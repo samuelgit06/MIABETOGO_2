@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Etablissement;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaisonsTable extends Migration
+class Images extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +14,10 @@ class CreateMaisonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('maisons', function (Blueprint $table) {
-            $table->id('id_maison');
+        Schema::create('etablissements', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(Etablissement::class);
             $table->timestamps();
-          //  $table->primary('id_maison');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateMaisonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('maisons');
+        //
     }
 }

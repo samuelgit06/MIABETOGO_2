@@ -20,9 +20,6 @@
           les meilleurs services de tourisme au togo !
       </h5>
     </section>
-
-
-
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
       <div class="container py-lg-4">
