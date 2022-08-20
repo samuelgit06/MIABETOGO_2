@@ -73,7 +73,7 @@
                                       <div class="col-md-12">
                                           <div class="product-filters">
                                               <ul>
-                                                  <li   data-filter=".lemon3" class="active">Enregistrer les informations en fonction de votre etablissement</li>
+                                                  <li   data-filter=".lemon3" class="active">Enregistrer les informations en fonction de votre établissement</li>
                                                <!--   <li  data-filter=".berry">Maison</li>
                                                   <li  data-filter=".berry2">Appartement</li>
                                                   <li data-filter=".lemon">Service de tourisme</li>
@@ -96,17 +96,20 @@
                                                         <div class="form-right">
                                                             <div class="form-inner-cont">
                                                                           
-                                                                      <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form">
+                                                                      <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form"  enctype="multipart/form-data">
                                                                         @csrf
-                                                                         <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                          <label>Type d'etablissement</label>
-                                                                            <select class="selectpicker" name="type_eta">
-                                                                                <option value="Maison">Maison</option>
-                                                                                <option value="Hotel">Hotel</option>
-                                                                                <option value="Appartement"> Appartement</option>
+                                                                        <center><H5>Type d'établissement</H5></center>
+                                                                        <br>
+                                                                         
+                                                                          <div class="form-input col-md-4 col-sm-6 mt-3">
+                                                                         <p>  <select class="selectpicker" name="type_eta" required='required'>
+                                                                           <option selected disabled>Type d'établissement</option>
+                                                                                <option value="Maison" >Maison</option>
+                                                                                <option value="Hotel" >Hotel</option>
+                                                                                <option value="Appartement" > Appartement</option>
                                                                                 <option value="Service de tourisme ">Service de tourisme</option>
                                                                                 <option value="Service de location">Service de Location</option>
-                                                                            </select>
+                                                                            </select></p>
                                 
                                                                           </div>
                                                                             <br>
@@ -114,23 +117,25 @@
                                                                             <br>
                                                                               <div class="row book-form ">
                                                                                   <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                      <input type="text" name="Nom" placeholder="Nom"/>
+                                                                                     <p> <input type="text" name="Nom" placeholder="Nom"/></p>
                                                                                   </div>
                                                                               </div>
                                                                           <br>
                                                                           <center><h5>Description</h5></center>
                                                                           <br>
                                                                             <div class="row book-form mb-3">
-                                                                                  <textarea name="Desc_eta"  id="message"cols="10" rows="5" class="form-control" required></textarea>
+                                                                                  <textarea name="Desc_eta"  placeholder="Decrivez votre etablisement"cols="10" rows="5" class="form-control" required></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         <br>
                                                                         <center><h5>Ajouter vos adresses</h5></center>
                                                                         <br>
                                                                           <div class="row book-form">
+                                                                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                               <label> Adresse Mail </label><br>
-                                                                               <input type="email" name="mail_eta" placeholder="Mail"/>
+                                                                               <input type="email" name="mail_eta" placeholder="Mail" />
+                                                                               
                                                                            </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                   <label> Adresse </label>
@@ -138,41 +143,48 @@
                                                                               </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                 <label> Numero de téléphone</label>
-                                                                                <input type="text" name="num_etablissment" placeholder="Numero de Teléphone" required />
+                                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone" required />
                                                                             </div> 
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
+                                                                             <center> <label> lien de votre site web</label></center>
+                                                                              <input type="url" name="lien_web_eta" placeholder="site web" required />
+                                                                          </div> 
+                                                                          <!--  <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                               <label>Site Web</label>
-                                                                              <input type="text" name="lien_web_eta" placeholder="Site Web" />
-                                                                          </div>
+                                                                              <input type="url" name="lien_web_eta" placeholder="Site Web" />
+                                                                          </div>-->
                                                                             
                                                                           </div>
                                                                         <br>
                                                                         <center><h5>Budget</h5></center>
                                                                         <br>
+                                                                       
                                                                           <div class="row book-form">
+                                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
+                                                                              <label> prix minimum </label>
+                                                                              <input type="number"  onchange="MaFonction()" id="prix_min" name="prix_min" placeholder="prix minimum"   required />
+                                                                          </div> 
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                   <label> Prix maximun </label>
-                                                                                  <input type="text" name="prix_max" placeholder="Max Price" required />
+                                                                                  <input type="number" id ="prix_max" name="prix_max" placeholder="prix maximum" required />
                                                                               </div>
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                <label> prix minimum </label>
-                                                                                <input type="text" name="prix_min" placeholder="Min Price" required />
-                                                                            </div> 
+                                                                             
                                                                           </div>
                                                                         <br>
                                                                         <br>
                                                                         <div>
                                                                           <label> ajouter un image </label>
-                                                                          <input type="file" name="images" placeholder="images" required />
+                                                                          <input type="file" name="file" placeholder="images"  id="formFile" required />
                                                                         </div>
                                                                         <br>
                                                                     <div>
                                                                       <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">Enregistrer</button>
                                                                     </div>
-                                                                 
                                                                     </div>
+                                                    </div>
                                                                     </form>
                                                                         </div>
+                                                                       
                                                                       </div>
                                                             </div>
                                                         </div>
@@ -182,380 +194,6 @@
                                                 </div>
                                               </div>
                                             </section>
-                                    
-
-                  <!--      <section  style="margin-left: 200px ;margin-top:-30em">         
-                                  <div class="row product-lists">
-                                    <div class="col-lg-17 col-md-21 text-center berry">
-                                      <div class="single-product-item"  >
-                                        <div class="product-image" style="align-items: center">
-                                          <section >
-                                            <section class="w3l-availability-form">
-                                              <div class="w3l-availability-form-main py-5">
-                                              <div class="container pt-lg-7 pb-lg-9">
-                                                <div class="forms-top">
-                                                  <div class="form-right">
-                                                    <div class="form-inner-cont">
-                                                        <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form">
-                                                          @csrf
-                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                            </div >
-                                                            <br>
-                                                            <center><h5>Description</h5></center>
-                                                                          <br>
-                                                                            <div class="row book-form mb-3">
-                                                                                  <textarea name="Desc_eta"  id="message"cols="10" rows="5" class="form-control"></textarea>
-                                                                                </div>
-                                                                            </div>
-                                                                        <br>
-                                                            <br>
-                                                            <center><h5>Ajouter vos adresses</h5></center>
-                                                            <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> Adresse Mail </label><br>
-                                                               <input type="email" name="mail" placeholder="Mail" required />
-                                                             </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Adresse </label>
-                                                                <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Numero de telephone</label>
-                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone" required />
-                                                              </div>  
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label>Site Web</label>
-                                                                <input type="text" name="lien_web_eta" placeholder="Site Web" />
-                                                            </div>
-                                                            </div>
-                                                          <br>
-                                                          <center><h5>Budget</h5></center>
-                                                          <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Prix maximun </label>
-                                                                <input type="text" name="prix_min" placeholder="Max Price" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> prix minimum </label>
-                                                              <input type="text" name="prix_max" placeholder="Min Price" required />
-                                                              </di>
-                                                            </div>
-                                                          <br>
-                                                            <br>
-                                                            <div class="row book-form">
-                                                              
-                                                                <label> ajouter un image </label>
-                                                                <input type="file" name="images" placeholder="images" required />
-                                                              
-                                                            </div>
-                                                              <div>
-                                                                <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">Enregistrer</button>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                    </form>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              </div>
-                                              <br>
-                                              <br>
-                                              <br>
-                                </section></center>
-          <section  style="margin-left: 200px ;margin-top:0em">         
-                                  <div class="row product-lists">
-                                    <div class="col-lg-17 col-md-21 text-center berry2">
-                                      <div class="single-product-item"  >
-                                        <div class="product-image" style="align-items: center">
-                                          <section >
-                                            <section class="w3l-availability-form">
-                                              <div class="w3l-availability-form-main py-5">
-                                              <div class="container pt-lg-7 pb-lg-9">
-                                                <div class="forms-top">
-                                                  <div class="form-right">
-                                                    <div class="form-inner-cont">
-                                                        <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form">
-                                                          @csrf
-                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                            </div >
-                                                            <br>
-                                                            <center><h5>Description</h5></center>
-                                                                          <br>
-                                                                            <div class="row book-form mb-3">
-                                                                                  <textarea name="Desc_eta"  id="message"cols="10" rows="5" class="form-control"></textarea>
-                                                                                </div>
-                                                                            </div>
-                                                                        <br>
-                                                            <br>
-                                                            <center><h5>Ajouter vos adresses</h5></center>
-                                                            <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> Adresse Mail </label><br>
-                                                               <input type="email" name="mail" placeholder="Mail" required />
-                                                             </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Adresse </label>
-                                                                <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Numero de telephone</label>
-                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone" required />
-                                                              </div>  
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label>Site Web</label>
-                                                                <input type="text" name="lien_web_eta" placeholder="Site Web" />
-                                                            </div>
-                                                            </div>
-                                                          <br>
-                                                          <center><h5>Budget</h5></center>
-                                                          <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Prix maximun </label>
-                                                                <input type="text" name="prix_min" placeholder="Max Price" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> prix minimum </label>
-                                                              <input type="text" name="prix_max" placeholder="Min Price" required />
-                                                              </di>
-                                                            </div>
-                                                          <br>
-                                                            <br>
-                                                            <div class="row book-form">
-                                                              <div>
-                                                                <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">Enregistrer</button>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                    </form>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              </div>
-                                              <br>
-                                              <br>
-                                              <br>
-                                </section></center>
-                                        	
-                     
-                        <section  style="margin-left: 200px;" style="margin-top:-15em">
-                                    <div class="row product-lists">
-                                    <div class="col-lg-17 col-md-21 text-center lemon">
-                                      <div class="single-product-item" >
-                                        <div class="product-image" style="align-items: center">
-                                          <section>
-                                            <section class="w3l-availability-form" id="booking" >
-                                              <div class="w3l-availability-form-main py-5">
-                                              <div class="container pt-lg-3 pb-lg-5">
-                                                <div class="forms-top">
-                                                  <div class="form-right">
-                                                    <div class="form-inner-cont">
-                                                            <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form">
-                                                              @csrf
-                                                            <br>
-                                                            <center><h5>Nom du service de tourisme </h5></center>
-                                                            <br>
-                                                              <div class="row book-form">
-                                                                <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                  <input type="text" name="Nom" placeholder="Nom" required="true" />
-                                                                </div>
-                                                              </div>
-                                                            <br>
-                                                            <center><h5>Description</h5></center>
-                                                            <br>
-                                                              <div class="row book-form mb-3">
-                                                                    <textarea name="Description"  id="message"cols="10" rows="5" class="form-control"></textarea>
-                                                                  </div>
-                                                              </div>
-                                                          <br>
-                                                            <center><h5>Ajouter vos adresses</h5></center>
-                                                            <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> Adresse Mail </label><br>
-                                                               <input type="email" name="mail" placeholder="Mail" required />
-                                                             </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Adresse </label>
-                                                                <input type="text" name="Addresse" placeholder="Adresse/localisation" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Numero de telephone</label>
-                                                                <input type="number" name="numero" placeholder="Numero de Teléphone" required />
-                                                              </div> 
-                                                            </div>
-                                                          <br>
-                                                          <center><h5>Budget</h5></center>
-                                                          <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <label> Prix maximun </label>
-                                                                <input type="text" name="prix_min" placeholder="Max Price" required />
-                                                              </div>
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                              <label> prix minimum </label>
-                                                              <input type="text" name="prix_max" placeholder="Min Price" required />
-                                                            </div> 
-                                                            </div>
-                                                          <br>
-                                                          <center><h5>Ajouter des images</h5></center>
-                                                          <br>
-                                                            <div class="row book-form">
-                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                <input type="file" name="prx_min" placeholder="Max Price" required />
-                                                              </div>
-                                                            </div>
-                      
-                                                            <br>
-                                                            <div class="row book-form">
-                                                            <div>
-                                                              <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="enregistrer ">
-                                                            </div>
-                                                          <!--  <div>
-                                                            <a  href="{{ URL:: to ('/user_page')}}"> <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="modifier"></a> 
-                                                            
-                                                            </div>
-                                                            <div>
-                                                              <center><h5>Ajouter des lieux </h5></center>
-                                                                           <br>
-                                                                             <div class="row book-form">
-                                                                                 <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                     <label>Nom du lieux  </label>
-                                                                                     <input type="text" name="nombre_lit" placeholder="nombre lit" required="true"/>
-                                                                                 </div>
-                                                                                 <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                   <label> localisation</label>
-                                                                                   <input type="text" name="caracteristiques" placeholder="caracteristiques " required />
-                                                                               </div> 
-                                                                          </div>
-                                                            </div>            
-                                                             <br>
-                                                             <br>
-                                                               <div class="row book-form">
-                                                                 <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                   <input type="file" name="prx_min" placeholder="Max Price" required />
-                                                                 </div>
-                                                               </div>
-                                                          </form>
-                                                          </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              </div>
-                            </section>
-                                                   
-                      
-                        <section  style="margin-left: 200px; margin-top:0em">
-                                  <div class="row product-lists" id="parentcontainer">
-                                    <div class="col-lg-17 col-md-21 text-center  lemon2">
-                                      <div class="single-product-item"  >
-                                        <div class="product-image" style="align-items: center">
-                                          <section class="location">
-                                            <section class="w3l-availability-form">
-                                              <div class="w3l-availability-form-main py-8">
-                                                <div class="container pt-lg-3 pb-lg-5">
-                                                    <div class="forms-top">
-                                                        <div class="form-right">
-                                                            <div class="form-inner-cont" id="childcontainer">  
-                                                                <form action="{{ route('EtablissementController.store') }}" method="#" class="signin-form">
-                                                                            <br>
-                                                                            <center><h5>Nom du service de votre service de location voiture  </h5></center>
-                                                                            <br>
-                                                                              <div class="row book-form">
-                                                                                  <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                      <input type="text" name="Nom" placeholder="Nom" required="true" />
-                                                                                  </div>
-                                                                              </div>
-                                                                          <br>
-                                                                          <center><h5>Description</h5></center>
-                                                                          <br>
-                                                                            <div class="row book-form mb-3">
-                                                                                  <textarea name="Description"  id="message"cols="10" rows="5" class="form-control"></textarea>
-                                                                                </div>
-                                                                            </div>
-                                                                        <br>
-                                                                          <center><h5>Ajouter vos adresses</h5></center>
-                                                                          <br>
-                                                                            <div class="row book-form">
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                <label> Adresse Mail </label><br>
-                                                                                 <input type="email" name="mail" placeholder="Mail" required="false" />
-                                                                             </div>
-                                                                                <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                    <label> Adresse </label>
-                                                                                    <input type="text" name="Addresse" placeholder="Adresse/localisation" required="false"/>
-                                                                                </div>
-                                                                                <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                  <label> Numero de telephone</label>
-                                                                                  <input type="number" name="numero" placeholder="Numero de Teléphone" required />
-                                                                              </div>   
-                                                                            </div>
-                                                                        <br>
-                                                                        <center><h5>Budget</h5></center>
-                                                                        <br>
-                                                                          <div class="row book-form">
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                  <label> Prix maximun </label>
-                                                                                  <input type="text" name="prix_min" placeholder="Max Price" required />
-                                                                              </div>
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                <label> prix minimum </label>
-                                                                                <input type="text" name="prix_max" placeholder="Min Price" required />
-                                                                            </div> 
-                                                                          </div>
-                                                                      
-                                                                        </div>
-                                                                    </div>
-                                                                  <br>
-                                                                  <br>
-                                                                    <div class="row book-form">
-                                                                        <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                            <input type="file" name="prix_min" placeholder="Max Price" required />
-                                                                        </div>
-                                                                    </div> 
-                                                                    <br>
-                                                                    <br>
-                                                                    <div class="row book-form">
-                                                                    <div>
-                                                                      <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="enregistrer ">
-                                                                    </div>
-                                                                 <!--   <div>
-                                                                    <a  href="{{ URL:: to ('/user_page')}}"> <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="modifier"></a> 
-                                                                    
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                    </div>
-                                                              <br>
-                                                              <br>
-                                                              <div class="row book-form">
-                                                              
-                                                                <input type="button" style="align-content: center" class="ml-3 book btn btn-secondary btn-style"   value="enregistrer ">
-                                                      
-                                                              </div>
-                                                      </div>
-                                                  </div>
-                                            
-                                
-                              </form>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                    </section>-->
-                                   
                       <section class="w3l-footer-29-main">
                           <div class="footer-29 py-5">
                             <div class="container py-lg-4">
@@ -598,6 +236,13 @@
                          <button onclick="topFunction()" id="movetop" title="Go to top">
                           &#10548;
                         </button>
+                        <script>
+                          var min=document.getElementById("prix_min");
+                          var max=document.getElementById("prix_max");
+                          function MaFonction(){
+                          max.setAttribute("min",min.value)
+                          }
+                        </script>
                         <script>
                           // When the user scrolls down 20px from the top of the document, show the button
                           window.onscroll = function () {

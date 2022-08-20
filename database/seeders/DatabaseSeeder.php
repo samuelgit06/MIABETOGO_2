@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Etablissement;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         Role::create(['name' => 'utilisateur']);
 
         User::factory(10)->create();
+        //Etablissement::factory(10)->create();
         DB::table('role_user')->truncate();
 
         $admin =  User::create([

@@ -48,39 +48,64 @@
                     <div class="form-inner-cont">
                      <center>   <h3 class="title-small">verifier les disponibiltés </h3></center>
                      <hr> 
-                        <form action="search-results.html" method="post" class="signin-form">
-                          <br>
-                          @csrf
-                          <div class="form-input col-md-4 col-sm-6 mt-3">
-                           <label>Type d'etablissement</label>
-                             <select class="selectpicker" name="type_eta">
-                                 <option value="Maison">Maison</option>
-                                 <option value="Hotel">Hotel</option>
-                                 <option value="Appartement"> Appartement</option>
-                                 <option value="Service de tourisme ">Service de tourisme</option>
-                                 <option value="Service de location">Service de Location</option>
-                             </select>
+                     <form action="{{ route('RequeteController.store') }}" method="POST" class="signin-form">
+                      @csrf
+                       <div class="form-input col-md-4 col-sm-6 mt-3">
+                        <label>Type d'etablissement</label>
+                          <select class="selectpicker" name="type_eta">
+                            <option selected disabled>Type d'etablissement</option>
+                              <option value="Maison">Maison</option>
+                              <option value="Hotel">Hotel</option>
+                              <option value="Appartement"> Appartement</option>
+                              <option value="Service de tourisme ">Service de tourisme</option>
+                              <option value="Service de location">Service de Location</option>
+                          </select>
 
-                           </div>
-                          <center><h5>Budget</h5></center>
-                          <br>
-                            <div class="row book-form" style="margin: auto">
-                                <div class="form-input col-md-4 col-sm-6 mt-3">
-                                    <label> Prix maximun </label>
-                                    <input type="text" name="prx_min" placeholder="Max Price" required />
-                                </div>
-                                <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <label> prix minimum </label>
-                                  <input type="text" name="prix_max" placeholder="Min Price" required />
-                              </div> 
-                            </div>
-                            <hr>
-                           <div>
-                         <center>   <a href="{{ URL:: to ('/verfier')}}" class="btn btn-primary">Verifier</a></center>
-                              
-                           </div>
                         </div>
-                        </form>
+                          <br>
+                          <center><h5>Nom de l'etablissement </h5></center>
+                          <br>
+                            <div class="row book-form ">
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <input type="text" name="Nom" placeholder="Nom"/>
+                                </div>
+                            </div>
+                        <br>
+                       
+                      <center><h5>Adresse</h5></center>
+                      <br>
+                        <div class="row book-form">
+                         
+                            <div class="form-input col-md-4 col-sm-6 mt-3">
+                                <label> Adresse </label>
+                                <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
+                            </div>
+                         
+                          
+                        </div>
+                      <br>
+                      <center><h5>Budget</h5></center>
+                      <br>
+                      <div class="row book-form">
+                        <div class="form-input col-md-4 col-sm-6 mt-3">
+                          <label> prix minimum </label>
+                          <input type="number"  onchange="MaFonction()" id="prix_min" name="prix_min" placeholder="prix minimum"   required />
+                      </div> 
+                          <div class="form-input col-md-4 col-sm-6 mt-3">
+                              <label> Prix maximun </label>
+                              <input type="number" id ="prix_max" name="prix_max" placeholder="prix maximum" required />
+                          </div>
+                         
+                      </div>
+                      <br>
+                      <br>
+                      
+                  <div>
+                    <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">chercher</button>
+                  </div>
+               
+                  </div>
+                  </form>
                     </div>
                 </div>
             </div>
@@ -177,6 +202,13 @@
  <button onclick="topFunction()" id="movetop" title="Go to top">
   &#10548;
 </button>
+<script>
+  var min=document.getElementById("prix_min");
+  var max=document.getElementById("prix_max");
+  function MaFonction(){
+  max.setAttribute("min",min.value)
+  }
+</script>
 <script>
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {

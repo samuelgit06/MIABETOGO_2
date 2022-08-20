@@ -25,7 +25,7 @@
 		</div>
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-            <h2 style="text-align: center; color: rgb(255, 106, 0); font-weight:600;">MIABETOGO</h2>
+            <h2 style="text-align: center; color: rgb(255, 106, 0);">MIABETOGO</h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>

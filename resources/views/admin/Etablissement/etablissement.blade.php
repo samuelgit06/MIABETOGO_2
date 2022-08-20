@@ -55,6 +55,15 @@
                                     </a>
                                 </div></td>
                             @endcan
+                            @can('edit-users')
+                                
+                           
+                            <td style="border: 1px solid black;"> <div>
+                                 <a href="{{ URL:: to ('/editEtablissement')}}">
+                                     <button style="background-color: green; color:aliceblue; height:35px; width: 100px; border-radius:5px;"><i class="fa fa-pencil"></i><span>modifier </span></button>
+                                 </a>
+                             </div></td>
+                         @endcan
                                 @can('delete-users')
                                     
                                 

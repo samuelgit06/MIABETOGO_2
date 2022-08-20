@@ -53,12 +53,16 @@ class EtablissementController extends Controller
        //$request->prix_max,
     //$request->prix_min);
        
-   //    $request->validate([
-
-    //   ]);
-
+  // $request->validate([
+    //    'type etablissement'=>'required',
+    //]);
+ 
        $id = Auth::user()->id;
 
+       $file=$request->file('file');
+       $imagename=time().'_'.$file->getClientOriginalName();
+       $file->move(\public_path("images/"),$imagename);
+       //dd($request->file);
 
        $temps= Etablissement::create([
         'Nom'=>$request->Nom,
@@ -67,7 +71,7 @@ class EtablissementController extends Controller
         'mail_eta'=>$request->mail_eta,
         'lien_web_eta'=>$request->lien_web_eta,
         'num_etablissment'=>$request->num_etablissment,
-        'images'=>$request->images,
+        'images'=>$imagename,
         'prix_max'=>$request->prix_max,
         'prix_min'=>$request->prix_min,
         'user_id'=>$id, 
@@ -76,7 +80,9 @@ class EtablissementController extends Controller
        ]);
        //dd($temps);
        $Etablissement=array();
-       
+      // $etablissement = $request->post();
+        //if($etablissement['prix_min'] >= $etablissement['prix_max'])
+        //return back()->withInputs()->with(['message' => 'la valeur minimum doit être inférieure à la valeur maximum']);
        
        return view('enregistrement');     
     }
@@ -102,7 +108,8 @@ class EtablissementController extends Controller
      */
     public function edit($id)
     {
-        //
+       
+        
     }
 
     /**
@@ -112,9 +119,20 @@ class EtablissementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Etablissement $etablissement)
     {
-        //
+       
+        $etablissement->Nom=$request->Nom;
+        $etablissement->mail_eta=$request->mail_eta;
+        $etablissement->num_etablissment=$request->num_etablissmen;
+        $etablissement->lien_web_eta=$request->lien_web_eta;
+        $etablissement->local_eta=$request->local_eta;
+        $etablissement->images=$request->image;
+        $etablissement->prix_max=$request->prix_max;
+        $etablissement->prix_min=$request->prix_min;
+        $etablissement->Desc_eta=$request->Desc_eta;
+        $etablissement->save();
+        return redirect()->route('admin.Etablissement.etablissement'); 
     }
 
     /**

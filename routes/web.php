@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\etablissement;
 use App\Http\Controllers\EtablissementController;
 use App\Http\Controllers\EVController;
+use App\Http\Controllers\RequeteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,6 +65,11 @@ Route::namespace('App\Http\Controllers\admin')->prefix('admin')->name('admin.')-
     Route::resource('user','UserController');
 });
 Route::get('admin/etablissement', [EtablissementController::class, 'index']);
+Route::resource('RequeteController', RequeteController::class);
+
+Route::get('/editEtablissement ', function () {
+    return view('admin.Etablissement.editEtablissement');
+});
 
 
 

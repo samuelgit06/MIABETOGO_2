@@ -1,4 +1,4 @@
-@extends('layouts.apps')
+@extends('layouts.lieux')
 @section('content')
 <!doctype html>
 <html lang="fr">
@@ -18,16 +18,87 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main2.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
+                      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+                          <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+                    
+                        <link rel="stylesheet" href="css/style-starter.css">
+                          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                          <meta name="viewport" content="width=device-width, initial-scale=1">
+                          <meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+                        <!-- google font -->
+                        <!-- fontawesome -->
+                        <link rel="stylesheet" href="assets/css/all.min.css">
+                        <!-- bootstrap -->
+                        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+                        <!-- owl carousel -->
+                        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+                        <!-- magnific popup -->
+                        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+                        <!-- animate css -->
+                        <link rel="stylesheet" href="assets/css/animate.css">
+                        <!-- mean menu css -->
+                        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+                        <!-- main style -->
+                        <link rel="stylesheet" href="assets/css/main.css">
+                        <!-- responsive -->
+                        <link rel="stylesheet" href="assets/css/responsive.css">
+                    
+                      <link rel="stylesheet" href="css/style-starter.css">
+                      <!--Js query-->
+                      <script src="assets/js/jquery-1.11.3.min.js"></script>
+                        <!-- bootstrap -->
+                        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                        <!-- count down -->
+                        <script src="assets/js/jquery.countdown.js"></script>
+                        <!-- isotope -->
+                        <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+                        <!-- waypoints -->
+                        <script src="assets/js/waypoints.js"></script>
+                        <!-- owl carousel -->
+                        <script src="assets/js/owl.carousel.min.js"></script>
+                        <!-- magnific popup -->
+                        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+                        <!-- mean menu -->
+                        <script src="assets/js/jquery.meanmenu.min.js"></script>
+                        <!-- sticker js -->
+                        <script src="assets/js/sticker.js"></script>
+                        <!-- main js -->
+                        <script src="assets/js/main.js"></script>
+                    
   </head>
   <body>
-<section>
+    <section>
+      
+      <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
+        le togo est divisé en cinq region administrative 
+      </h5>
+    </section>
+    <section  style=" margin-top:-7em">
+      <div class="product-section mt-150 mb-150">
+            <div class="container">
+    
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-filters">
+                            <ul>
+                                <li   data-filter=".lemon3" class="active">Region martime</li>
+                                <li  data-filter=".berry">Region des plateaux</li>
+                                <li  data-filter=".berry2">Region des savanes</li>
+                                <li data-filter=".lemon">Region de la Kara</li>
+                                <li data-filter=".lemon2"> Region centrale</li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+       </section>
+<section style="margin-top:-10em">
     <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
       visiter les beaux lieux au TOGO grace au services de tourismes !
     </h5>
   </section>
   <br>
   <br>
-
   <section class="recipe-section spad">
     <div class="container">
         <div class="row">
@@ -105,40 +176,7 @@
             </div>
            
       
-</section>	
-                        </section>
-                        <br>
-                        <br>
-                        <br>
-                        <section class="w3l-footer-29-main">
-                            <div class="footer-29 py-5">
-                              <div class="container py-lg-4">
-                                <div class="row footer-top-29">
-                                  <div class="col-lg-3 col-md-6 col-sm-8 footer-list-29 footer-1">
-                                  </div>
-                                  <div class="col-lg-2 col-md-6 col-sm-4 footer-list-29 footer-2 mt-sm-0 mt-5">
-                          
-                                    <ul>
-                                      <h6 class="footer-title-29">Useful Links</h6>
-                                      <li><a href="{{ URL:: to ('/index')}}">Home</a></li>
-                                      <li><a href="{{ URL:: to ('/services')}}">Services</a></li>
-                                      <li><a href="{{ URL:: to ('/reservation')}}">Reservation</a></li>
-                                      <li><a {{ URL:: to ('/news')}}">Contact us</a></li>-->
-                                    </ul>
-                                  </div>
-                                  <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
-                                    <h6 class="footer-title-29">Nouvelles  </h6>
-                                    <p>Entrer votre mail pour recevoir des nouvelles </p>
-                          
-                                    <form action="#" class="subscribe" method="post">
-                                      <input type="email" name="email" placeholder="Your Email Address" required="">
-                                      <button><span class="fa fa-envelope-o"></span></button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </section>
+          </section>
                           
                           
                           <section class="w3l-footer-29-main w3l-copyright">

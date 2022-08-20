@@ -61,9 +61,12 @@ class EVController extends Controller
      */
     public function edit($key)
     {
-    $etablissement = ModelsEtablissement::get();
+   // $etablissement = ModelsEtablissement::get()->where('id=$key');
+   //$etablissement = new  ModelsEtablissement ();
+   $etablissement = ModelsEtablissement::all()->find($key);
 
-        foreach($etablissement as $key => $value){
+
+       /*foreach($etablissement as $key => $value){
             EtablissementVerifier::create([
                 'Nom' => $value->Nom,
                 'Desc_eta'=>$value->Desc_eta,
@@ -79,7 +82,24 @@ class EVController extends Controller
             ]);
                 return'verifié avec succes';
             
-        }
+        }*/
+
+       $eta= EtablissementVerifier::create([
+            'Nom' => $etablissement->Nom,
+            'Desc_eta'=>$etablissement->Desc_eta,
+             'local_eta'=>$etablissement->local_eta ,
+             'mail_eta'=>$etablissement->mail_eta,
+             'lien_web_eta'=>$etablissement->lien_web_eta,
+             'num_etablissment'=>$etablissement->num_etablissment,
+             'images'=>$etablissement->images,
+             'prix_max'=>$etablissement->prix_max,
+             'prix_min'=>$etablissement->prix_min,
+             'type_eta'=>$etablissement->type_eta,
+             'user_id' =>$etablissement->user_id,  
+        ]);
+
+        return'verifié avec succes';
+
 
     }
 
