@@ -42,7 +42,7 @@
 
 <section class="w3l-availability-form" id="booking">
     <div class="w3l-availability-form-main py-5">
-        <div class="container pt-lg-3 pb-lg-5">
+        <div class="container pt-lg-1 pb-lg-1">
             <div class="forms-top">
                 <div class="form-right">
                     <div class="form-inner-cont">

@@ -70,20 +70,20 @@
                             </h4>
 
                         </section>
-                        <center> <section  style=" margin-top:-15em">
+                        <section  style=" margin-top:-5em">
                           <div class="product-section mt-150 mb-150">
                                 <div class="container">
                         
-                                    <div class="row">
-                                        <div class="col-md-15">
+                                    <div>
+                                        <div >
                                             <div class="product-filters">
-                                                <ul>
-                                                 ><li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/dashboard')}}">Retourner sur la page d'enregistrement</a></li>
-                                                </ul>
+                                             <center>   <ul>
+                                                 <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/dashboard')}}">Retourner sur la page d'enregistrement</a></li>
+                                                </ul></center>
                                             </div>
                                         </div>
                                       </div>
-                           </section></center>
+                           </section>
                         <section class="w3l-footer-29-main">
                             <div class="footer-29 py-5">
                               <div class="container py-lg-4">

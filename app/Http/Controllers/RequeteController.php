@@ -58,14 +58,14 @@ class RequeteController extends Controller
        // $etablissement=EtablissementVerifier::all()
        $etablissement=DB::table('etablissement_verifiers')->select('*')
         ->where('type_eta','=',$request->type_eta)
-        ->where('Nom','=',$request->Nom)
+        ->orwhere('Nom','=',$request->Nom)
         
     //  ->where('prix_min','=',(int)$request->prix_min)
      // ->where('prix_max','=',(int)$request->prix_max)
         ->get();
            $etas=$etablissement;
-           $eta=$etas->all();
-       //dd($eta->all());
+           $eta=$etas;
+       //dd($eta);
         return view('verifier' ,compact('eta'));   
         
        // $Etablissementverifier=array();

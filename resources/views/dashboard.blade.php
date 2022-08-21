@@ -65,7 +65,7 @@
                     
                       </head>
                       <body>
-                    <section  style=" margin-top:-9em">
+                    <section  style=" margin-top:-10em">
                         <div class="product-section mt-150 mb-150">
                               <div class="container">
                       
@@ -147,7 +147,7 @@
                                                                             </div> 
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                              <center> <label> lien de votre site web</label></center>
-                                                                              <input type="url" name="lien_web_eta" placeholder="site web" required />
+                                                                              <input type="url" name="lien_web_eta" placeholder="site web" />
                                                                           </div> 
                                                                           <!--  <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                               <label>Site Web</label>

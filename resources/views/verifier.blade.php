@@ -13,6 +13,27 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="css/style-starter.css">
+    <link rel="stylesheet" href="css/style-starter.css">
+    <!--Js query-->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+      <!-- bootstrap -->
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <!-- count down -->
+      <script src="assets/js/jquery.countdown.js"></script>
+      <!-- isotope -->
+      <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+      <!-- waypoints -->
+      <script src="assets/js/waypoints.js"></script>
+      <!-- owl carousel -->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <!-- magnific popup -->
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <!-- mean menu -->
+      <script src="assets/js/jquery.meanmenu.min.js"></script>
+      <!-- sticker js -->
+      <script src="assets/js/sticker.js"></script>
+      <!-- main js -->
+      <script src="assets/js/main.js"></script>
   </head>
   <body>
 </header>
@@ -24,41 +45,36 @@
       </div>
     <table style="margin: auto">
       <tr>
-   <td> <div class="card" style="width: 18rem;">
-      <img src="images/{{$eta[0]->images}}" class="card-img-top" alt="...">
+@foreach ($eta as $etablissement  )
+   <td> <div class="card" style="width: 20rem; border-raduis:15px">
+      <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{$etablissement->Nom}}</h5>
+        <p class="card-text text-justify">{{$etablissement->Desc_eta}}</p>
+        <p class="card-text   text-orange-500" >Telephone :{{$etablissement->num_etablissment}}</p>
+        <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
       </div>
     </div></td>
-   <td> <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><td>
-   <td> <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><td>
-    <td><div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div></td>
-  </tr>
+      </tr>
+    @endforeach
     </table>
 </section>
+<section  style=" margin-top:0em">
+  <div class="product-section mt-50 mb-10">
+        <div class="container">
+
+            <div>
+                <div >
+                    <div class="product-filters">
+                     <center>   <ul>
+                         <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/rechercher')}}">Rechercher autre logement</a></li>
+                        </ul></center>
+                    </div>
+                </div>
+              </div>
+   </section>
+
+
 <hr>
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
