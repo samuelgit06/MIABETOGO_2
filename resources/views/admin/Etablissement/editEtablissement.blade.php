@@ -8,7 +8,7 @@
             <div class="card-header ">Modifier
                 <table>
                     <tr>
-                        <td style="border: 1px solid black; ">{{ $etablissement->Nom}}</td>
+                    <td style="border: 1px solid black; ">{{ $etablissement->Nom}}</td>
                      <td style="border: 1px solid black; "> {{$etablissement->mail_eta}}</td>
                      <td style="border: 1px solid black; "> {{$etablissement->Desc_eta}}</td>
                      <td style="border: 1px solid black; "> {{$etablissement->num_etablissment}}</td>

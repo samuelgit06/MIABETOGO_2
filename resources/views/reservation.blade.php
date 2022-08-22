@@ -46,19 +46,18 @@
             <div class="forms-top">
                 <div class="form-right">
                     <div class="form-inner-cont">
-                     <center>   <h3 class="title-small">verifier les disponibiltés </h3></center>
+                     <center>   <h3 class="title-small">verifier les disponibiltés des lieux ou séjouner </h3></center>
                      <hr> 
                      <form action="{{ route('RequeteController.store') }}" method="POST" class="signin-form">
                       @csrf
                        <div class="form-input col-md-4 col-sm-6 mt-3">
                         <label>Type d'etablissement</label>
                           <select class="selectpicker" name="type_eta">
-                            <option selected disabled>Type d'etablissement</option>
+                            <option selected disabled>Que recherchez vous ?</option>
                               <option value="Maison">Maison</option>
                               <option value="Hotel">Hotel</option>
                               <option value="Appartement"> Appartement</option>
-                              <option value="Service de tourisme ">Service de tourisme</option>
-                              <option value="Service de location">Service de Location</option>
+                              
                           </select>
 
                         </div>
@@ -67,11 +66,11 @@
                           <br>
                             <div class="row book-form ">
                                 <div class="form-input col-md-4 col-sm-6 mt-3">
-                                    <input type="text" name="Nom" placeholder="Nom"/>
+                                    <input type="text" name="Nom" placeholder="Nom" />
                                 </div>
                             </div>
                         <br>
-                       
+                      </div>
                       <center><h5>Adresse</h5></center>
                       <br>
                         <div class="row book-form">

@@ -109,10 +109,8 @@
                         <br><a href="{{ URL:: to ('/tourisme')}}">
                             <h4>Le mont agou</h4>
                             </a>
-                        <p>le mont Agou est le plus haut sommet du TOGO,culminant a 986 metres d'altitude, il se situe entre Amoussoukope et Kpalime </p>
-                        
-                      
-                    </div>
+                        <p>le mont Agou est le plus haut sommet du TOGO,culminant a 986 metres d'altitude, il se situe entre Amoussoukope et Kpalime </p>              
+            </div>
                 </div>
             </div>
             <hr>

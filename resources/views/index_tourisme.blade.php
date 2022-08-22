@@ -13,13 +13,86 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="css/style-starter.css">
+    <link rel="stylesheet" href="css/style-starter.css">
+    <!--Js query-->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+      <!-- bootstrap -->
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <!-- count down -->
+      <script src="assets/js/jquery.countdown.js"></script>
+      <!-- isotope -->
+      <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+      <!-- waypoints -->
+      <script src="assets/js/waypoints.js"></script>
+      <!-- owl carousel -->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <!-- magnific popup -->
+      <script src="assets/js/jquery.magnific-popup.min.js"></script>
+      <!-- mean menu -->
+      <script src="assets/js/jquery.meanmenu.min.js"></script>
+      <!-- sticker js -->
+      <script src="assets/js/sticker.js"></script>
+      <!-- main js -->
+      <script src="assets/js/main.js"></script>
   </head>
+
+@if (empty($eta))
+pas de logement disponible 
+@else
+@endif
+
+<section class="w3l-breadcrumb">
+  <div class="breadcrum-bg py-sm-5 py-4">
+      <div class="container py-lg-3">
+          <h2>Logement disponible</h2>
+      </div>
+    </div>
+  
+
+@foreach ($etablissement as $etablissement  )
+<div class="card mb-3" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+     <!-- <img src="{{$etablissement->images}}" class="img-fluid rounded-start" alt="...">-->
+      <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{$etablissement->Nom}}</h5>
+        <p class="card-text">{{$etablissement->Desc_eta}}</p>
+        <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
+        <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
+        <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
+        <a >
+          <h4>{{$etablissement->lien_web_eta}}</h4>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
+</section>
+
   <body>
-    <section>
-      <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
-          les meilleurs services de tourisme au togo !
-      </h5>
-    </section>
+</header>
+
+<section  style=" margin-top:0em">
+  <div class="product-section mt-50 mb-10">
+        <div class="container">
+
+            <div>
+                <div >
+                    <div class="product-filters">
+                     <center>   <ul>
+                         <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/rechercher')}}">Rechercher autre logement</a></li>
+                        </ul></center>
+                    </div>
+                </div>
+              </div>
+   </section>
+
+
+<hr>
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
       <div class="container py-lg-4">
@@ -31,12 +104,24 @@
             <ul>
               <h6 class="footer-title-29">Useful Links</h6>
               <li><a href="{{ URL:: to ('/index')}}">Home</a></li>
-              <li><a href="{{ URL:: to ('/services')}}">Services</a></li>
+              <li><a href="{{ URL:: to ('/services')}}">Galleries</a></li>
               <li><a href="{{ URL:: to ('/reservation')}}">Reservation</a></li>
              <!-- <li><a href="#blogposts"> Blog posts</a></li>
               <li><a {{ URL:: to ('/news')}}">Contact us</a></li>-->
             </ul>
-        </div>
+          </div>
+         <!-- <div class="col-lg-3 col-md-6 col-sm-5 footer-list-29 footer-3 mt-lg-0 mt-5">
+              <h6 class="footer-title-29">Latest from blog</h6>
+              <div class="footer-post mb-4">
+                <a href="#url">Work Passionately</a>
+                <p class="small"><span class="fa fa-clock-o"></span> March 9, 2020</p>
+              </div>
+              <div class="footer-post">
+                <a href="#url">Work Passionately without any hesitation</a>
+                <p class="small"><span class="fa fa-clock-o"></span> March 9, 2020</p>
+              </div>
+              
+          </div>-->
           <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
             <h6 class="footer-title-29">Nouvelles  </h6>
             <p>Entrer votre mail pour recevoir des nouvelles </p>
@@ -221,5 +306,4 @@
   </body>
   
   </html>
-  @endsection()
-  
+  @endsection

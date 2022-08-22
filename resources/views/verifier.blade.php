@@ -35,30 +35,96 @@
       <!-- main js -->
       <script src="assets/js/main.js"></script>
   </head>
-  <body>
-</header>
+
+@if (empty($eta))
+pas de logement disponible 
+@else
+@endif
+
 <section class="w3l-breadcrumb">
-    <div class="breadcrum-bg py-sm-5 py-4">
-        <div class="container py-lg-3">
-            <h2>Logement disponible</h2>
-        </div>
+  <div class="breadcrum-bg py-sm-5 py-4">
+      <div class="container py-lg-3">
+          <h2>Logement disponible</h2>
       </div>
-    <table style="margin: auto">
-      <tr>
+    </div>
+  
+<!--@foreach ($eta as $etablissement  )
+ <td> <div class="card" style="width: 20rem; border-raduis:15px">
+    <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
+    <div class="card-body" style="align-items:auto">
+      <h5 class="card-title">{{$etablissement->Nom}}</h5>
+      <p class="card-text text-justify">{{$etablissement->Nom}}</p>
+      <p class="card-text   text-orange-500" >Telephone :{{$etablissement->num_etablissment}}</p>
+      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
+    </div>
+  </div>
+  
+  @endforeach
+
+  @foreach ($eta as $etablissement  )
+  <div class="card text-bg-dark">
+    <img src="images/{{$etablissement->images}}" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{$etablissement->Nom}}</h5>
+      <p class="card-text">{{$etablissement->Desc_eta}}</p>
+      <p class="card-text">Telephone :{{$etablissement->num_etablissment}}</p>
+      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
+    </div>
+  </div>
+  @endforeach
+  @foreach ($eta as $etablissement  )
+  <div class="card mb-5" style="margin: auto">
+    <img src="{{$etablissement->images}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{$etablissement->Nom}}</h5>
+      <p class="card-text">{{$etablissement->Desc_eta}}</p>
+      <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
+      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
+    </div>
+  </div>
+  @endforeach
+  @foreach ($eta as $etablissement  )
+  <div class="col-lg-4 col-sm-6">
+    <div class="recipe-item">
+        <img src="{{$etablissement->images}}" alt="">
+        <div class="ri-text">
+            <br>
+            <h5 class="card-title">{{$etablissement->Nom}}</h5>
+            <p class="card-text">{{$etablissement->Desc_eta}}</p>
+            <a href="">
+                <h4>{{$etablissement->lien_web_eta}}</h4>
+            </a>
+            <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
+        </div>
+    </div>
+</div>
+@endforeach-->
 @foreach ($eta as $etablissement  )
-   <td> <div class="card" style="width: 20rem; border-raduis:15px">
+<div class="card mb-3" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+     <!-- <img src="{{$etablissement->images}}" class="img-fluid rounded-start" alt="...">-->
       <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{$etablissement->Nom}}</h5>
-        <p class="card-text text-justify">{{$etablissement->Desc_eta}}</p>
-        <p class="card-text   text-orange-500" >Telephone :{{$etablissement->num_etablissment}}</p>
-        <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
+        <p class="card-text">{{$etablissement->Desc_eta}}</p>
+        <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
+        <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
+        <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
+        <a href="{{$etablissement->lien_web_eta}}" class="card-link">vister le site web </a>
+       
       </div>
-    </div></td>
-      </tr>
-    @endforeach
-    </table>
+    </div>
+  </div>
+</div>
+@endforeach
 </section>
+
+  <body>
+</header>
+
 <section  style=" margin-top:0em">
   <div class="product-section mt-50 mb-10">
         <div class="container">
@@ -67,7 +133,7 @@
                 <div >
                     <div class="product-filters">
                      <center>   <ul>
-                         <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/rechercher')}}">Rechercher autre logement</a></li>
+                         <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/reservation')}}">Rechercher autre logement</a></li>
                         </ul></center>
                     </div>
                 </div>

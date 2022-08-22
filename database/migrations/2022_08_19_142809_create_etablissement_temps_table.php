@@ -16,7 +16,7 @@ class CreateEtablissementTempsTable extends Migration
     {
         Schema::create('etablissement_temps', function (Blueprint $table) {
                 $table->id();
-                $table-> string('Nom')->Nullable(true);
+                $table-> string('Nom')->nullable(true);
                 $table-> string('local_eta');
                 $table ->double('prix_max');
                 $table->double('prix_min');

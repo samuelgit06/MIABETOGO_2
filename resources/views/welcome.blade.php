@@ -61,9 +61,9 @@
                          <div class="banner-info">
                              <div class="container">
                                  <div class="banner-info-bg">
-                                     <h5>Trouver des hotels et maison pour passer votre sejour
+                                     <h5>Trouver des lieux ou passer votre séjour 
                                      </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/reservation')}}">rerserver maintenant</a>
+                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/reservation')}}">Rechercher </a>
                                  </div>
                              </div>
                          </div>
@@ -77,7 +77,7 @@
                              <div class="container">
                                  <div class="banner-info-bg">
                                      <h5>Explorer les offres de location de voiture </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/index_voiture')}}">en savoir plus</a>
+                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/index_voiture')}}">Voir plus</a>
                                  </div>
                              </div>
                          </div>
@@ -92,7 +92,7 @@
                                  <div class="banner-info-bg">
                                      <h5>visiter des meilleurs endroits au togo 
                                      </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/lieux')}}">en savoir plus </a>
+                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/lieux')}}">Voir plus </a>
                                  </div>
                              </div>
                          </div>
@@ -168,9 +168,9 @@
                         </figcaption>
                     </figure>
                     <div class="room-info">
-                        <h3 class="room-title"><a  ref="{{ URL:: to ('/index-voiture')}}" >mailleurs tarifs de location </a></h3>
+                        <h3 class="room-title"><a  ref="{{ URL:: to ('/index_voiture')}}" >mailleurs tarifs de location </a></h3>
                         <p></p>
-                        <a href="{{ URL:: to ('/index-voiture')}}" class="btn btn-style btn-primary mt-sm-4 mt-3"> voir plus </a>
+                        <a href="{{ URL:: to ('/index_voiture')}}" class="btn btn-style btn-primary mt-sm-4 mt-3"> voir plus </a>
                     </div>
                 </div>
             </div>

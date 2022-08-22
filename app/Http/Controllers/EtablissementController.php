@@ -131,8 +131,12 @@ class EtablissementController extends Controller
         $etablissement->prix_max=$request->prix_max;
         $etablissement->prix_min=$request->prix_min;
         $etablissement->Desc_eta=$request->Desc_eta;
-        $etablissement->save();
+        $etas=$etablissement;
+        $eta=$etas;
+        $eta->save();
         return redirect()->route('admin.Etablissement.etablissement'); 
+        
+       
     }
 
     /**

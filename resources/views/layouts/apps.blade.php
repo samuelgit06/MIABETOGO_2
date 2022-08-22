@@ -98,7 +98,7 @@
                                 @endif
                             @endauth--}}
                                                       <ul>
-                                                          <li   data-filter=".lemon3" class="active"><a href="{{ url('/dashboard') }}">Se faire connaitre</a></li>
+                                                          <li   data-filter=".lemon3"  class="active"><a href="{{ url('/dashboard') }}"  style=" font-color:black ">Se faire connaitre</a></li>
                                                           <li  data-filter=".berry"><a href="{{ url('/lieux') }}">Decouvrir</a></li>
                                                         </ul>
                                                 

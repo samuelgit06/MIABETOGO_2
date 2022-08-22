@@ -6,28 +6,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>MIABETOGO</title>
-
     <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
-
     <!-- Template CSS -->
     <link rel="stylesheet" href="css/style-starter.css">
   </head>
   <body>
 <!--w3l-header-->
-
 <header class="w3l-header-nav">
-	<!--/nav
-	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+	<!--/nav-->
+	<!--<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 		<div class="container">
             <h4>MIABETOGO</h4>
-			<a class="navbar-brand" href="index.html">
-				<img alt="Your logo" style="height:35px;" /> Hotels</a>
-			 if logo is image enable this   
-						<a class="navbar-brand" href="#index.html">
-							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-						</a> 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -37,146 +27,122 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="{{ URL:: to ('/')}}">Home</a>
-					</li>
-					<li class="nav-item @@about__active">
-						<a class="nav-link" href="{{ URL:: to ('/about')}}">About</a>
-					</li>
+          </li>
 					<li class="nav-item @@about__active">
 						<a class="nav-link" href="{{ URL:: to ('/services')}}">Gallerie</a>
 					</li>
-					
 				</ul>
-				<a href="{{ URL:: to ('/login')}}" class="ml-3 book btn btn-secondary btn-style">connecter vous</a>
-        <a href="{{ URL:: to ('/ajout_etablissement')}}" class="ml-3 book btn btn-secondary btn-style">ajouter un etablissement</a>
+				<a href="{{ URL:: to ('/login')}}" class="ml-3 book btn btn-secondary btn-style">conncter vous</a>
+                <a href="{{ URL:: to ('/ajout_etablissement')}}" class="ml-3 book btn btn-secondary btn-style">ajouter un etablissement</a>
 			</div>
 		</div>
 	</nav>
-	-->
+	//nav-->
 </header>
-<section>
-  <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
-    trouvez des services en fonction de votre budget
-  </h5>
-</section>
-<section class="w3l-availability-form" id="booking">
-  <!-- /w3l-availability-form-section -->
-  <div class="w3l-availability-form-main py-5">
-      <div class="container pt-lg-3 pb-lg-5">
-          <div class="forms-top">
-              <div class="form-right">
-                  <div class="form-inner-cont">
-                   
-                      <form action="search-results.html" method="post" class="signin-form">
-                        <hr>
-                        <br>
-                        <center><h5>Prix</h5></center>
-                        <br>
-                          <div class="row book-form">
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                  <center><label> Prix minimun </label></center>
-                                  <input type="text" name="" placeholder="Max Price" required />
-                              </div>
-                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <center><label> Prix maximun </label></center>
-                                <input type="text" name="" placeholder="Min Price" required />
-                            </div> 
-                          </div>
-                      <br>
-                      <br>
-                      <div >
-                        <center><button class="btn btn-style btn-primary ">verifier </button></center>
-                   </div>
-                       <!--  <center> <h5>Date</h5></center>
-                         <br>
-                          <div class="row book-form">
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Date de debut </label>
-                                <input type="date" name="" placeholder="Date" required="">
-                            </div>
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Date de fin </label>
-                                <input type="date" name="" placeholder="Date" required="">
-                            </div>
-                          </div>-->
-                          
-                         
-                         <!-- <div class="row book-form">
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Type de voitures </label>
-                                <select class="selectpicker">
-                                    <option>SUV</option>
-                                    <option>berline</option>
-                                    <option>Coupé</option>
-                                    <option>van</option>
-                                </select>
-                            </div>
-                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                <label>Nombre de jours </label>
-                                <select class="selectpicker">
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                    <option>une semaine </option>
-                                    <option>deux semaines</option>
-                                    <option>un mois </option>
-                                    <option>deux mois </option>
-                                    <option>trois mois </option>
-                                </select>
-                            </div>
-                            
-                      </div>-->
-                  
-                     
-                           
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
 
-<section class="w3l-breadcrumb">
-  <table style="margin: auto">
-    <tr>
- <td> <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<section class="w3l-availability-form" id="booking">
+    <div class="w3l-availability-form-main py-5">
+        <div class="container pt-lg-1 pb-lg-1">
+            <div class="forms-top">
+                <div class="form-right">
+                    <div class="form-inner-cont">
+                     <center>   <h3 class="title-small">verifier les disponibiltés des lieux ou séjouner </h3></center>
+                     <hr> 
+                     <form action="" method="POST" class="signin-form">
+                      @csrf
+
+                        </div>
+                          <br>
+                          <center><h5>Nom de l'etablissement </h5></center>
+                          <br>
+                            <div class="row book-form ">
+                                <div class="form-input col-md-4 col-sm-6 mt-3">
+                                    <input type="text" name="Nom" placeholder="Nom" />
+                                </div>
+                            </div>
+                        <br>
+                      </div>
+                      <center><h5>Adresse</h5></center>
+                      <br>
+                        <div class="row book-form">
+                         
+                            <div class="form-input col-md-4 col-sm-6 mt-3">
+                                <label> Adresse </label>
+                                <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
+                            </div>
+                         
+                          
+                        </div>
+                      <br>
+                      <center><h5>Budget</h5></center>
+                      <br>
+                      <div class="row book-form">
+                        <div class="form-input col-md-4 col-sm-6 mt-3">
+                          <label> prix minimum </label>
+                          <input type="number"  onchange="MaFonction()" id="prix_min" name="prix_min" placeholder="prix minimum"   required />
+                      </div> 
+                          <div class="form-input col-md-4 col-sm-6 mt-3">
+                              <label> Prix maximun </label>
+                              <input type="number" id ="prix_max" name="prix_max" placeholder="prix maximum" required />
+                          </div>
+                         
+                      </div>
+                      <br>
+                      <br>
+                      
+                  <div>
+                    <button style="align-content: center" class="ml-3 book btn btn-secondary btn-style">chercher</button>
+                  </div>
+               
+                  </div>
+                  </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div></td>
- <td> <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div><td>
- <td> <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div><td>
-  <td><div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div></td>
-</tr>
-  </table>
 </section>
+<section>
+  <section class="w3l-breadcrumb">
+    <table style="margin: auto">
+      <tr>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><td>
+   <td> <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><td>
+    <td><div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></td>
+  </tr>
+    </table>
+<section>
+    
+
 <section class="w3l-footer-29-main">
   <div class="footer-29 py-5">
     <div class="container py-lg-4">
@@ -190,26 +156,11 @@
             <li><a href="{{ URL:: to ('/index')}}">Home</a></li>
             <li><a href="{{ URL:: to ('/services')}}">Services</a></li>
             <li><a href="{{ URL:: to ('/reservation')}}">Reservation</a></li>
-           <!-- <li><a href="#blogposts"> Blog posts</a></li>
-            <li><a {{ URL:: to ('/news')}}">Contact us</a></li>-->
           </ul>
         </div>
-       <!-- <div class="col-lg-3 col-md-6 col-sm-5 footer-list-29 footer-3 mt-lg-0 mt-5">
-            <h6 class="footer-title-29">Latest from blog</h6>
-            <div class="footer-post mb-4">
-              <a href="#url">Work Passionately</a>
-              <p class="small"><span class="fa fa-clock-o"></span> March 9, 2020</p>
-            </div>
-            <div class="footer-post">
-              <a href="#url">Work Passionately without any hesitation</a>
-              <p class="small"><span class="fa fa-clock-o"></span> March 9, 2020</p>
-            </div>
-            
-        </div>-->
         <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
           <h6 class="footer-title-29">Nouvelles  </h6>
           <p>Entrer votre mail pour recevoir des nouvelles </p>
-
           <form action="#" class="subscribe" method="post">
             <input type="email" name="email" placeholder="Your Email Address" required="">
             <button><span class="fa fa-envelope-o"></span></button>
@@ -241,6 +192,13 @@
  <button onclick="topFunction()" id="movetop" title="Go to top">
   &#10548;
 </button>
+<script>
+  var min=document.getElementById("prix_min");
+  var max=document.getElementById("prix_max");
+  function MaFonction(){
+  max.setAttribute("min",min.value)
+  }
+</script>
 <script>
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
@@ -390,4 +348,4 @@ $(function () {
 </body>
 
 </html>
-@endsection()
+@endsection

@@ -143,7 +143,7 @@
                                                                               </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                 <label> Numero de téléphone</label>
-                                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone" required />
+                                                                                <input type="number" name="num_etablissment" placeholder="Numero de Teléphone"  min="70000000" max="99999999" required />
                                                                             </div> 
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                              <center> <label> lien de votre site web</label></center>
