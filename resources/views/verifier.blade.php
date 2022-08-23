@@ -39,7 +39,6 @@
 @if (empty($eta))
 pas de logement disponible 
 @else
-@endif
 
 <section class="w3l-breadcrumb">
   <div class="breadcrum-bg py-sm-5 py-4">
@@ -47,81 +46,34 @@ pas de logement disponible
           <h2>Logement disponible</h2>
       </div>
     </div>
-  
-<!--@foreach ($eta as $etablissement  )
- <td> <div class="card" style="width: 20rem; border-raduis:15px">
-    <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
-    <div class="card-body" style="align-items:auto">
-      <h5 class="card-title">{{$etablissement->Nom}}</h5>
-      <p class="card-text text-justify">{{$etablissement->Nom}}</p>
-      <p class="card-text   text-orange-500" >Telephone :{{$etablissement->num_etablissment}}</p>
-      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
-    </div>
-  </div>
-  
-  @endforeach
-
-  @foreach ($eta as $etablissement  )
-  <div class="card text-bg-dark">
-    <img src="images/{{$etablissement->images}}" class="card-img" alt="...">
-    <div class="card-img-overlay">
-      <h5 class="card-title">{{$etablissement->Nom}}</h5>
-      <p class="card-text">{{$etablissement->Desc_eta}}</p>
-      <p class="card-text">Telephone :{{$etablissement->num_etablissment}}</p>
-      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
-    </div>
-  </div>
-  @endforeach
-  @foreach ($eta as $etablissement  )
-  <div class="card mb-5" style="margin: auto">
-    <img src="{{$etablissement->images}}" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title">{{$etablissement->Nom}}</h5>
-      <p class="card-text">{{$etablissement->Desc_eta}}</p>
-      <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
-      <p class="card-text"> Adresse web :{{$etablissement->lien_web_eta}}</p>
-    </div>
-  </div>
-  @endforeach
-  @foreach ($eta as $etablissement  )
-  <div class="col-lg-4 col-sm-6">
-    <div class="recipe-item">
-        <img src="{{$etablissement->images}}" alt="">
-        <div class="ri-text">
-            <br>
-            <h5 class="card-title">{{$etablissement->Nom}}</h5>
-            <p class="card-text">{{$etablissement->Desc_eta}}</p>
-            <a href="">
-                <h4>{{$etablissement->lien_web_eta}}</h4>
-            </a>
-            <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
-        </div>
-    </div>
-</div>
-@endforeach-->
-@foreach ($eta as $etablissement  )
-<div class="card mb-3" style="max-width: 800px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-     <!-- <img src="{{$etablissement->images}}" class="img-fluid rounded-start" alt="...">-->
-      <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{$etablissement->Nom}}</h5>
-        <p class="card-text">{{$etablissement->Desc_eta}}</p>
-        <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
-        <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
-        <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
-        <a href="{{$etablissement->lien_web_eta}}" class="card-link">vister le site web </a>
-       
-      </div>
-    </div>
-  </div>
-</div>
-@endforeach
+<br><div class="container">
+  <div class="row">
+@foreach ($eta as $etablissement  ) 
+          <div class="col-lg-4 col-sm-2" style="background-color:ghostwhite;">
+            <div class="recipe-item">
+                <p><img src="images/{{$etablissement->images}}" alt="image"></p>
+                <div style="text-align:left; color:black;" class="form-group"><br>
+                    
+                    <br><a>
+                        <h3 style="color:rgb(255, 106, 0); font-weight:550; text-style:justify;">{{$etablissement->Nom}}</h3>
+                    </a>
+                    <p style="font-family: arial; font-size:16px; color:black;">{{$etablissement->Desc_eta}}</p>
+                    <p style="font-family: roboto; font-size:16px;"><u>Telephone</u> : {{$etablissement->num_etablissment}}</p>
+                    <p style="font-family: roboto; font-size:16px;"><u>Prix Maximum</u> : {{$etablissement->prix_max}}</p>
+                    <p style="font-family: roboto; font-size:16px;"><u>Prix Minimum</u> : {{$etablissement->prix_min}}</p>
+                    <p {{$etablissement->lien_web_eta}} class="card-link">vister le site web </p><br>         
+                  <br></div>
+                  <i class="star" data-note="1">&#9733;</i>
+                <i class="star" data-note="2">&#9733;</i>
+                <i class="star" data-note="3">&#9733;</i>
+                <i class="star" data-note="4">&#9733;</i>
+                <i class="star" data-note="5">&#9733;</i>
+                <i class="note">Note:</i>
+            </div>
+        </div><br>
+        @endforeach
 </section>
-
+@endif
   <body>
 </header>
 
@@ -301,6 +253,55 @@ pas de logement disponible
       })
     })
   </script>
+  <!--etoile-->
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let check = false;
+    stars.forEach(star => {
+        star.addEventListener('mouseover', selectStars);
+        star.addEventListener('mouseleave', unselectStars);
+        star.addEventListener('click', activeSelect);
+    })
+
+    function selectStars(e) {
+        const data = e.target;
+        const etoiles = priviousSiblings(data);
+        if (!check) {
+            etoiles.forEach(etoile => {
+                etoile.classList.add('hover');
+            })
+        }
+
+    }
+
+    function unselectStars(e) {
+        const data = e.target;
+        const etoiles = priviousSiblings(data);
+        if (!check) {
+            etoiles.forEach(etoile => {
+                etoile.classList.remove('hover');
+            })
+        }
+    }
+
+    function activeSelect(e) {
+        if (!check) {
+            check = true;
+            document.querySelector('.note').innerHTML = 'Note ' + e.target.dataset.note;
+        }
+    }
+
+    function priviousSiblings(data) {
+        let values = [data];
+        while (data = data.previousSibling) {
+            if (data.nodeName === 'I') {
+                values.push(data);
+            }
+        }
+        return values;
+    }
+</script>
+
   <!-- //script for owlcarousel -->
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script>

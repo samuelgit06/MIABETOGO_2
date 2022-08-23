@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\EtablissementTemp;
-use App\Models\EtablissementVerifier;
 use Etablissement;
+use Illuminate\Http\Request;
+use InvalidArgumentException;
+use App\Models\EtablissementTemp;
 use Illuminate\Support\Facades\DB;
+use App\Models\EtablissementVerifier;
 
 class RequeteController extends Controller
 {
@@ -58,11 +59,11 @@ class RequeteController extends Controller
        // $etablissement=EtablissementVerifier::all()
        $etablissement=DB::table('etablissement_verifiers')->select('*')
        ->Where('local_eta','=',$request->local_eta)
-        ->orwhere('type_eta','=',$request->type_eta)
-       ->orwhere('Nom','=',$request->Nom)
+        ->where('type_eta','=',$request->type_eta)
+       ->where('Nom','=',$request->Nom)
         
-      ->where('prix_min','=',$request->prix_min)
-     ->where('prix_max','=',$request->prix_max)
+      //->where('prix_min','<=',$request->prix_min)
+     //->where('prix_max','>=',$request->prix_max)
      /*{
         if(empty($eta)){
 
@@ -122,6 +123,12 @@ class RequeteController extends Controller
     {
         //
     }
+    public function set($model, $key, $eta, $attributes)
+{
+    if (! $eta instanceof EtablissementTemp) {
+        throw new InvalidArgumentException('oups pas de correspondance un email sera ');
+    }
+}
 
    
 }

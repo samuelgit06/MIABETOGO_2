@@ -70,6 +70,7 @@
                      </div>
                  </li>
              </div>
+             <form  action="{{ route('RequeteLocation.index') }}" method="GET">
              <div class="item">
                  <li>
                      <div class="slider-info  banner-view banner-top1 bg bg2">
@@ -77,13 +78,14 @@
                              <div class="container">
                                  <div class="banner-info-bg">
                                      <h5>Explorer les offres de location de voiture </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/index_voiture')}}">Voir plus</a>
+                                     <button style="align-content: center" class="btn btn-style transparent-btn mt-sm-5 mt-4" >chercher</button>
                                  </div>
                              </div>
                          </div>
                      </div>
                  </li>
              </div>
+            </form>
              <div class="item">
                  <li>
                      <div class="slider-info banner-view banner-top2 bg bg2">
@@ -238,9 +240,9 @@
 
           <ul>
             <h6 class="footer-title-29">Useful Links</h6>
-            <li><a href="{{ URL:: to ('/index')}}">Home</a></li>
-            <li><a href="{{ URL:: to ('/services')}}">Galleries</a></li>
-            <li><a href="{{ URL:: to ('/reservation')}}">Reservation</a></li>
+            <li><a href="{{ URL:: to ('/lieux')}}">Services de tourisme</a></li>
+            <li><a href="{{ URL:: to ('/index_voiture')}}">Services de Location</a></li>
+            <li><a href="{{ URL:: to ('/reserver')}}">Reservation</a></li>
            <!-- <li><a href="#blogposts"> Blog posts</a></li>
             <li><a {{ URL:: to ('/news')}}">Contact us</a></li>-->
           </ul>

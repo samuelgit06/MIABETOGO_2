@@ -98,8 +98,9 @@
                                 @endif
                             @endauth--}}
                                                       <ul>
-                                                          <li   data-filter=".lemon3"  class="active"><a href="{{ url('/dashboard') }}"  style=" font-color:black ">Se faire connaitre</a></li>
-                                                          <li  data-filter=".berry"><a href="{{ url('/lieux') }}">Decouvrir</a></li>
+                                                          <li   data-filter=".lemon3" style=" background-color:green; border-color:green;"><a href="{{ url('/dashboard') }}"  style="color:white; font-size:16px;">Se faire connaitre</a></li>
+                                                          <li  data-filter=".berry" style=" background-color:green; border-color:green;"><a href="{{ url('/lieux') }}" style="color:white; font-size:16px;">Decouvrir</a></li>
+                                                          <li  data-filter=".berry" style=" background-color:green; border-color:green;"><a href="{{ url('/dashboardLieux') }}" style="color:white; font-size:16px;">Ajouter un lieux </a></li>
                                                         </ul>
                                                 
                                  

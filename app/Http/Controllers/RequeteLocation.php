@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\EtablissementVerifier;
 
-class Requetetourisme extends Controller
+class RequeteLocation extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +13,13 @@ class Requetetourisme extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         $eta=DB::table('etablissement_verifiers')->select('*')
-        ->Where('type_eta','=','Service de tourisme')
+        ->Where('type_eta','=','Service de location')
         ->get();
           // $eta=$etas;
           //dd($eta);
-     return view('index_tourisme' ,compact('eta')); 
+     return view('index_voiture' ,compact('eta')); 
     }
 
     /**

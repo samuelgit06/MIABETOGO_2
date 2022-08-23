@@ -18,9 +18,9 @@ class CreateEtablissementTempsTable extends Migration
                 $table->id();
                 $table-> string('Nom')->nullable(true);
                 $table-> string('local_eta');
-                $table ->double('prix_max');
-                $table->double('prix_min');
-                $table->string('type_eta');
+                $table ->double('prix_max')->nullable(true);
+                $table->double('prix_min')->nullable(true);
+                $table->string('type_eta')->nullable(true);
                 $table->timestamps();
             });
            

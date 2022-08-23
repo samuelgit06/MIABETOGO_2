@@ -92,6 +92,208 @@
                     </div>
                   </div>
        </section>
+       <section>
+       <section>
+        <section  style="margin-left: 170px ">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  lemon3">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                        <br><div class="container">
+                                          <div class="row">     
+                                                <form action="{{ route('regionMa') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                  @csrf
+                                                  @foreach ($lieux as $lieu  ) 
+          <div class="col-lg-4 col-sm-2" style="background-color:ghostwhite;">
+            <div class="recipe-item">
+                <p><img src="images/{{$lieu->images}}" alt="image"></p>
+                <div style="text-align:left; color:black;" class="form-group"><br>
+                    
+                    <br><a>
+                        <h3 style="color:rgb(255, 106, 0); font-weight:550; text-style:justify;">{{$lieu->Nom}}</h3>
+                    </a>
+                    <p style="font-family: arial; font-size:16px; color:black;">{{$lieu->Desc_Lieux}}</p>
+                    <p style="font-family: arial; font-size:16px; color:black;">{{$lieu->local_eta}}</p>
+                
+                    <p style="font-family: roboto; font-size:16px;"><u>Prix par personne</u> : {{$lieu->prix}}</p>
+                           
+                  <br></div>
+                  <i class="star" data-note="1">&#9733;</i>
+                <i class="star" data-note="2">&#9733;</i>
+                <i class="star" data-note="3">&#9733;</i>
+                <i class="star" data-note="4">&#9733;</i>
+                <i class="star" data-note="5">&#9733;</i>
+                <i class="note">Note:</i>
+            </div>
+        </div><br>
+        @endforeach
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+       <section>
+        <section  style="margin-left: 170px;  ">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  berry">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                                    
+                                                <form action="{{ route('LieuxController.regionPla') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                 
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+       <section>
+        <section  style="margin-left: 170px; margin-top:-9em">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  berry2">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                                    
+                                              <form>
+                                             
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+       <section>
+        <section  style="margin-left: 170px;margin-top:-9em ">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  lemon">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                                    
+                                                <form action="{{ route('LieuxController.regionCent') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                  
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+       <section>
+        <section  style="margin-left: 170px; margin-top:-9em">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  lemon2">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                                    
+                                                <form action="{{ route('LieuxController.regionkar') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                  
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+       <section>
+        <section  style="margin-left: 170px; margin-top:-9em">            
+          <div class="row product-lists">
+              <div class="col-lg-17 col-md-21 text-center  lemon2">
+                <div class="single-product-item"  style="align-items: center">
+                  <div class="product-image" >
+                    <section class="hotel"  >
+                      <section class="w3l-availability-form">
+                        <div class="w3l-availability-form-main py-5"> 
+                          <div class="container pt-lg-7 pb-lg-9">
+                              <div class="forms-top">
+                                  <div class="form-right">
+                                      <div class="form-inner-cont">
+                                                    
+                                                <form action="{{ route('LieuxController.regionSav') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                  
+                                              </form>
+                                                  </div>
+                                                 
+                                                </div>
+                                      </div>
+                                  </div>
+                            </section>
+                              </section>
+                              </div>
+                          </div>
+                        </div>
+                      </section>
+       </section>
+      </section>
+     
 <section style="margin-top:-10em">
     <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
       visiter les beaux lieux au TOGO grace au services de tourismes !
@@ -139,6 +341,34 @@
                           </div>
                 </div>
             </div>
+          </section>
+          <br>
+          <br>
+          <section  style=" margin-top:0em">
+            <form action="{{ route('Requetetourisme.index') }}" method="GET">
+              @csrf
+            <div class="product-section mt-50 mb-10">
+                  <div class="container">
+                      <div>
+                          <div >
+                              <div class="product-filters">
+                               <center>   <ul>
+                                <div>
+                                  <button style="align-content: center" class=" btn btn-primary">chercher des services de tourisme disponible </button>
+                                </div>
+                                  </ul></center>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            </form>
+             </div>
+             </section>
+          
+            <section class="recipe-section spad">
+              <div class="container">
+                <div class="row">
             <div class="col-lg-4 col-sm-6">
                 <div class="recipe-item">
                     <a href="{{ URL:: to ('/tourisme')}}"><img src="images/timberma.jpg" alt=""></a>
@@ -175,6 +405,7 @@
            
       
           </section>
+          
                           
                           
                           <section class="w3l-footer-29-main w3l-copyright">

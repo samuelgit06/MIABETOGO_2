@@ -13,8 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+   
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -70,10 +69,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm  margin-left:2em">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <h2 style="text-align: center; color: rgb(255, 106, 0);"">MIABETOGO</h2>
+                <h2 style="text-align: center; color: rgb(255, 106, 0);">MIABETOGO</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -88,7 +87,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         @if (Route::has('login'))
-                        <div  class="product-filters" style="margin-bottom: -1em  ">
+                        <div  class="product-filters" style="margin-bottom: -1em ; margin-right:0cm" >
                             
                                {{-- <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Se faire connaitre</a>
                             
@@ -99,8 +98,8 @@
                                 @endif
                             @endauth--}}
                                                       <ul>
-                                                          <li   data-filter=".lemon3" class="active"><a href="{{ url('/dashboard') }}">Se faire connaitre</a></li>
-                                                    
+                                                          <li   data-filter=".lemon3" style=" background-color:green; border-color:green;"><a href="{{ url('/dashboard') }}"  style="color:white; font-size:16px;">Se faire connaitre</a></li>
+                                                          <li  data-filter=".berry" style=" background-color:green; border-color:green;"><a href="{{ url('/dashboardLieux') }}" style="color:white; font-size:16px;">Ajouter un lieux </a></li>
                                                         </ul>
                                                 
                                  

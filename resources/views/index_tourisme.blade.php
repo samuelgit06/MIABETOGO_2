@@ -42,56 +42,70 @@ pas de logement disponible
 @endif
 
 <section class="w3l-breadcrumb">
-  <div class="breadcrum-bg py-sm-5 py-4">
+  <div class="breadcrum-bg py-sm-5 py-4" style="background-color:ghostwhite;">
       <div class="container py-lg-3">
-          <h2>Logement disponible</h2>
+          <h2>Les meilleurs services de tourisme </h2>
       </div>
-    </div>
+    </div><br>
   
-
-@foreach ($etablissement as $etablissement  )
-<div class="card mb-3" style="max-width: 800px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-     <!-- <img src="{{$etablissement->images}}" class="img-fluid rounded-start" alt="...">-->
-      <img src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{$etablissement->Nom}}</h5>
-        <p class="card-text">{{$etablissement->Desc_eta}}</p>
-        <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
-        <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
-        <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
-        <a >
-          <h4>{{$etablissement->lien_web_eta}}</h4>
-      </a>
+    {{-- @foreach ($eta as $etablissement  )
+    <div class="card mb-3" style="width:100% ">
+      <div class="form-group" style="background-color:aliceblue;">
+        <div class="form-group" style="background-color:aliceblue;">
+          <div class="col-md-6">
+              <img style="height:50%; width:50%; border-radius:15px;" src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
+            </div>
+        </div>
+        <div class="col-md-6>
+          <div class="card-body">
+            <h5 class="card-title">{{$etablissement->Nom}}</h5>
+            <p class="card-text">{{$etablissement->Desc_eta}}</p>
+            <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
+            <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
+            <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
+            <a {{$etablissement->lien_web_eta}} class="card-link">vister le site web </a>
+          </div>
+        </div>
       </div>
     </div>
+    @endforeach --}}
+  <br><div class="container">
+    <div class="row">
+
+      @foreach ($eta as $etablissement  ) 
+        <div class="col-lg-4 col-sm-2" style="background-color:ghostwhite;">
+          <div class="recipe-item">
+              <p><img src="images/{{$etablissement->images}}" alt="image"></p>
+              <div style="text-align:left; color:black;" class="form-group"><br>
+                  
+                  <br><a>
+                      <h3 style="color:rgb(255, 106, 0); font-weight:550; text-style:justify;">{{$etablissement->Nom}}</h3>
+                  </a>
+                  <p style="font-family: arial; font-size:16px; color:black;">{{$etablissement->Desc_eta}}</p>
+                  <p style="font-family: roboto; font-size:16px;"><u>Telephone</u> : {{$etablissement->num_etablissment}}</p>
+                  <p style="font-family: roboto; font-size:16px;"><u>Prix Maximum</u> : {{$etablissement->prix_max}}</p>
+                  <p style="font-family: roboto; font-size:16px;"><u>Prix Minimum</u> : {{$etablissement->prix_min}}</p>
+                  <p {{$etablissement->lien_web_eta}} class="card-link">vister le site web </p><br>         
+                <br></div>
+                <i class="star" data-note="1">&#9733;</i>
+                <i class="star" data-note="2">&#9733;</i>
+                <i class="star" data-note="3">&#9733;</i>
+                <i class="star" data-note="4">&#9733;</i>
+                <i class="star" data-note="5">&#9733;</i>
+                <i class="note">Note:</i>
+              </div>
+          </div>
+      </div><br>
+    <div>
+    
+      @endforeach
   </div>
-</div>
-@endforeach
+  </div><br>
+
 </section>
 
   <body>
 </header>
-
-<section  style=" margin-top:0em">
-  <div class="product-section mt-50 mb-10">
-        <div class="container">
-
-            <div>
-                <div >
-                    <div class="product-filters">
-                     <center>   <ul>
-                         <li  class="active">   <a class=" mt-sm-5 mt-4"  href="{{ URL:: to ('/rechercher')}}">Rechercher autre logement</a></li>
-                        </ul></center>
-                    </div>
-                </div>
-              </div>
-   </section>
-
-
 <hr>
 <section class="w3l-footer-29-main">
     <div class="footer-29 py-5">
@@ -157,6 +171,54 @@ pas de logement disponible
    <button onclick="topFunction()" id="movetop" title="Go to top">
     &#10548;
   </button>
+  <!-- etoile-->
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let check = false;
+    stars.forEach(star => {
+        star.addEventListener('mouseover', selectStars);
+        star.addEventListener('mouseleave', unselectStars);
+        star.addEventListener('click', activeSelect);
+    })
+
+    function selectStars(e) {
+        const data = e.target;
+        const etoiles = priviousSiblings(data);
+        if (!check) {
+            etoiles.forEach(etoile => {
+                etoile.classList.add('hover');
+            })
+        }
+
+    }
+
+    function unselectStars(e) {
+        const data = e.target;
+        const etoiles = priviousSiblings(data);
+        if (!check) {
+            etoiles.forEach(etoile => {
+                etoile.classList.remove('hover');
+            })
+        }
+    }
+
+    function activeSelect(e) {
+        if (!check) {
+            check = true;
+            document.querySelector('.note').innerHTML = 'Note ' + e.target.dataset.note;
+        }
+    }
+
+    function priviousSiblings(data) {
+        let values = [data];
+        while (data = data.previousSibling) {
+            if (data.nodeName === 'I') {
+                values.push(data);
+            }
+        }
+        return values;
+    }
+</script>
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {

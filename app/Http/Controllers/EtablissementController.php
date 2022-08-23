@@ -53,8 +53,9 @@ class EtablissementController extends Controller
        //$request->prix_max,
     //$request->prix_min);
        
-  // $request->validate([
-    //    'type etablissement'=>'required',
+ //$request->validate([
+   //    'type etablissement'=>['required','type_eta'],
+       
     //]);
  
        $id = Auth::user()->id;

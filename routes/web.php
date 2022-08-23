@@ -4,7 +4,10 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\etablissement;
 use App\Http\Controllers\EtablissementController;
 use App\Http\Controllers\EVController;
+use App\Http\Controllers\LieuxController;
 use App\Http\Controllers\RequeteController;
+use App\Http\Controllers\RequeteLocation;
+use App\Http\Controllers\Requetetourisme;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,6 +61,12 @@ Route::get('/user_page', function () {
 Route::get('/reservation', function () {
     return view('reservation');
 });
+Route::get('/EnregistrementLieux', function () {
+    return view('enregistrement_lieux');
+});
+Route::get('/dashboardLieux', function () {
+    return view('dashboardLieux');
+})->middleware(['auth'])->name('dashboardLieux');
 
 
 Route::get('admin/user', [UserController::class, 'index']);
@@ -70,6 +79,20 @@ Route::resource('RequeteController', RequeteController::class);
 Route::get('/editEtablissement ', function () {
     return view('admin.Etablissement.editEtablissement');
 });
+
+
+//Route::resource( Requetetourisme::class,'Requetetourisme.index');
+Route::resource('Requetetourisme', Requetetourisme::class);
+Route::resource('RequeteLocation', RequeteLocation::class);
+Route::resource('LieuxController',LieuxController::class);
+Route::get('/Lieux', 'LieuController@regionMa')->name('regionMa');
+
+
+
+//Route::get('/Lieux', 'LieuController@regionCent')->name('regionCent');
+//Route::get('/Lieux', 'LieuController@regionKar')->name('regionKar');
+//Route::get('/Lieux', 'LieuController@regionPlat')->name('regionPlat');
+//Route::get('/Lieux', 'LieuController@regionSav')->name('regionSav');
 
 
 

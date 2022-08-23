@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
+    <!--<x-slot name="header">
         <h4 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family: font-size:26px; text-align:center;">
-            Ajouter votre etablissement pour vous faire connaitre !
+            
         </h4>
-    </x-slot>
+    </x-slot>-->
 
     <div class="py-12">        
             <!doctype html>
@@ -73,7 +73,7 @@
                                       <div class="col-md-12">
                                           <div class="product-filters">
                                               <ul>
-                                                  <li   data-filter=".lemon3" class="active">Enregistrer les informations en fonction de votre établissement</li>
+                                                  <li   data-filter=".lemon3" class="active">Ajouter un lieux que vous aviez visité </li>
                                                <!--   <li  data-filter=".berry">Maison</li>
                                                   <li  data-filter=".berry2">Appartement</li>
                                                   <li data-filter=".lemon">Service de tourisme</li>
@@ -96,26 +96,26 @@
                                                         <div class="form-right">
                                                             <div class="form-inner-cont">
                                                                           
-                                                                      <form action="{{ route('EtablissementController.store') }}" method="POST" class="signin-form"  enctype="multipart/form-data">
+                                                                      <form action="{{ route('LieuxController.store') }}" method="POST" class="signin-form"  enctype="multipart/form-data">
                                                                         @csrf
                                                                         <br>
                                                                         <div class="container">
                                                                           <div class="row">                                                                          
                                                                             <div class="form-input col-md-6 ">
-                                                                            <h5 for="label-form-group" class="pull-left"><u><b>Type d'établissement</b></u></h5>
-                                                                            <p><br><br><select class="selectpicker" name="type_eta" required>
+                                                                            <h5 for="label-form-group" class="pull-left"><u><b>Choissisez  la region </b></u></h5>
+                                                                            <p><br><br><select class="selectpicker" name="region" required>
                                                                            <option selected disabled></option>
-                                                                                <option value="Maison" >Maison</option>
-                                                                                <option value="Hotel" >Hotel</option>
-                                                                                <option value="Appartement" > Appartement</option>
-                                                                                <option value="Service de tourisme ">Service de tourisme</option>
-                                                                                <option value="Service de location">Service de Location</option>
+                                                                                <option value="Region Maritime" >Region Maritime </option>
+                                                                                <option value="Region des plateaux" >Region des plateaux</option>
+                                                                                <option value="Region Centrale" >Region Centrale</option>
+                                                                                <option value="Region de la Kara ">Region de la Kara</option>
+                                                                                <option value="Region des savanes">Region des savanes</option>
                                                                             </select></p>
                                                                           </div>
 
                                                                           <div class="form-input col-md-6 ">
-                                                                            <h5 for="label-form-group" class="pull-left"><u><b>Nom de l'etablissement</b></u></h5>
-                                                                            <p><br><br><input type="text" name="Nom" placeholder="Nom(*)"/>
+                                                                            <h5 for="label-form-group" class="pull-left"><u><b>Nom du lieux</b></u></h5>
+                                                                            <p><br><br><input type="text" name="Nom" placeholder="Nom" required/>
                                                                           </div>
 
                                                                         </div>
@@ -125,50 +125,30 @@
                                                                           <center><h5 for="label-form-group" ><u><b>Description</b></u></h5></center>
                                                                           <br>
                                                                             <div class="row book-form mb-3">
-                                                                                  <textarea name="Desc_eta"  placeholder="Decrivez votre etablisement"cols="1" rows="5" class="form-control" required></textarea>
+                                                                                  <textarea name="Desc_Lieux"  placeholder="Decrivez le leix que vous aviez visiter vos appreciation et remarque "cols="1" rows="5" class="form-control" required></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         <br>
-                                                                        <center><h5 for="label-form-group" ><u><b>Ajouter vos addresses</b></u></h5></center>
+                                                                        <center><h5 for="label-form-group" ><u><b>Ajouter l' addresse du lieux (le nom de la ville ou de la localité )</b></u></h5></center>
                                                                         <br>
                                                                           <div class="row book-form">
                                                                             <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                                                                            <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                              <center><h5 for="label-form-group" ><u><b>Addresse Mail</b></u></h5></center>
-                                                                              <br>
-                                                                               <input type="email" name="mail_eta" placeholder="Mail(*)" />
-                                                                               
-                                                                           </div>
                                                                               <div class="form-input col-md-4 col-sm-6 mt-3">
                                                                                 <center><h5 for="label-form-group" ><u><b>Addresse</b></u></h5></center>
                                                                                 <br>
-                                                                                  <input type="text" name="local_eta" placeholder="Adresse/localisation" required />
+                                                                                  <input type="text" name="local_eta" placeholder="Adresse/localisation" />
                                                                               </div>
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-5">
-                                                                                <center><h5 for="label-form-group" ><u><b>Numero de téléphone</b></u></h5></center>
-                                                                                <br>
-                                                                                <input  size="30" style="border-radius: 5px" type="int" min="0" maxlength="8"  minlength="8" name="num_etablissment" placeholder="Tel (huit chiffre)"   required />
-                                                                            </div> 
                                                                             <br>
-                                                                            <div class="form-input col-md-4 col-sm-6 mt-3" class="pull-left">
-                                                                              <center><h5 for="label-form-group"  ><u><b>Lien de votre site web</b></u></h5></center>
-                                                                              <br>
-                                                                              <input style="border-radius: 5px" type="url" name="lien_web_eta" placeholder="site web(*)" />
-                                                                          </div> 
                                                                           </div>
                                                                         <br>
-                                                                        <center><h5 for="label-form-group" ><u><b>Budget</b></u></h5></center>
+                                                                        <center><h5 for="label-form-group" ><u><b>Y'a t'il un montant pour acceder a ce lieux ?</b></u></h5></center>
                                                                         <br>
                                                                        
                                                                           <div class="row book-form">
                                                                             <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                              <center><h5 for="label-form-group" ><u><b>Prix minimum</b></u></h5></center>
-                                                                              <input type="number"  onchange="MaFonction()" id="prix_min" name="prix_min" placeholder="prix minimum"   required />
+                                                                              <center><h5 for="label-form-group" ><u><b>Prix par personne </b></u></h5></center>
+                                                                              <input type="number" id="prix" name="prix" placeholder="Montant" />
                                                                           </div> 
-                                                                              <div class="form-input col-md-4 col-sm-6 mt-3">
-                                                                                <center><h5 for="label-form-group" ><u><b>Prix maximum</b></u></h5></center>
-                                                                                  <input type="number" id ="prix_max" name="prix_max" placeholder="prix maximum" class="pull-right" required />
-                                                                              </div>
                                                                              
                                                                           </div>
                                                                         <br>
