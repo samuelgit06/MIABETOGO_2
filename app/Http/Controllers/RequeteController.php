@@ -60,7 +60,7 @@ class RequeteController extends Controller
        $etablissement=DB::table('etablissement_verifiers')->select('*')
        ->Where('local_eta','=',$request->local_eta)
         ->where('type_eta','=',$request->type_eta)
-       ->where('Nom','=',$request->Nom)
+       ->orwhere('Nom','=',$request->Nom)
         
       //->where('prix_min','<=',$request->prix_min)
      //->where('prix_max','>=',$request->prix_max)

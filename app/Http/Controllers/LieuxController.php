@@ -108,7 +108,7 @@ class LieuxController extends Controller
         
     }
 
-    public function regionMa(){
+   /* public function regionMa(){
         $lieux=DB::table('lieuxes')->select('*')
         ->Where('region','=','region maritime')
         ->get();
@@ -141,5 +141,5 @@ class LieuxController extends Controller
         ->Where('region','=','region des savanes')
         ->get();
      return view('lieux' ,compact('lieux')); 
-    }
+    }*/
 }

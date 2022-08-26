@@ -86,6 +86,7 @@
                  </li>
              </div>
             </form>
+            <form  action="{{ route('Requetetourisme.index') }}" method="GET">
              <div class="item">
                  <li>
                      <div class="slider-info banner-view banner-top2 bg bg2">
@@ -94,14 +95,14 @@
                                  <div class="banner-info-bg">
                                      <h5>visiter des meilleurs endroits au togo 
                                      </h5>
-                                     <a class="btn btn-style transparent-btn mt-sm-5 mt-4" href="{{ URL:: to ('/lieux')}}">Voir plus </a>
+                                     <button style="align-content: center" class="btn btn-style transparent-btn mt-sm-5 mt-4" >chercher</button>
                                  </div>
                              </div>
                          </div>
                      </div>
                  </li>
              </div>
-        
+            </form>
          </div>
      </div>
  </section>

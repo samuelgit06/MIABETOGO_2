@@ -51,7 +51,7 @@
                            
                                <td style="border: 1px solid black;"> <div>
                                     <a href="{{ (route('EVController.edit',$etablissement->id))}}">
-                                        <button style="background-color: green; color:aliceblue; height:35px; width: 100px; border-radius:5px;"><i class="fa fa-pencil"></i><span>verifier </span></button>
+                                        <button style="background-color: green; color:aliceblue; height:35px; width: 100px; border-radius:5px;"><i class="fa fa-pencil"></i><span>valider l'information </span></button>
                                     </a>
                                 </div></td>
                             @endcan

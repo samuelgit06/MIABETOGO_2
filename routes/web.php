@@ -1,14 +1,17 @@
 <?php
 
-use App\Http\Controllers\admin\UserController;
-use App\Http\Controllers\etablissement;
-use App\Http\Controllers\EtablissementController;
+use App\Http\Controllers\LController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EVController;
+use App\Http\Controllers\etablissement;
+use App\Http\Controllers\LieuController;
 use App\Http\Controllers\LieuxController;
-use App\Http\Controllers\RequeteController;
 use App\Http\Controllers\RequeteLocation;
 use App\Http\Controllers\Requetetourisme;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RequeteController;
+use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\LressourceController;
+use App\Http\Controllers\EtablissementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +49,9 @@ Route::get('/verifier', function () {
 Route::get('/enregistrement ', function () {
     return view('enregistrement');
 });
-Route::get('/lieux', function () {
-    return view('lieux');
-});
+// Route::get('/lieux', function () {
+//     return view('lieux');
+// });
 Route::get('/tourisme', function () {
     return view('index_tourisme ');
 });
@@ -85,8 +88,14 @@ Route::get('/editEtablissement ', function () {
 Route::resource('Requetetourisme', Requetetourisme::class);
 Route::resource('RequeteLocation', RequeteLocation::class);
 Route::resource('LieuxController',LieuxController::class);
-Route::get('/Lieux', 'LieuController@regionMa')->name('regionMa');
+Route::resource('LressouceController',LressourceController::class);
+//Route::get('/LieuxMa', [LController::class,'regionMa'])->name('regionMa');
+//Route::get('/Lieuxpla', [LieuController::class,'regionpla'])->name('regionpla');
+//Route::get('/LieuxCent', [LieuController::class,'regionCent'])->name('regionCent');
+//Route::get('/LieuxKar', [LieuController::class,'regionKar'])->name('regionKar');
+//Route::get('/LieuxSav', [LieuController::class,'regionSav'])->name('regionSav');
 
+Route::get('lieux', [LieuController::class, 'regionMa'])->name('lieu');
 
 
 //Route::get('/Lieux', 'LieuController@regionCent')->name('regionCent');

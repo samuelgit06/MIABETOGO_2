@@ -44,7 +44,7 @@ pas de logement disponible
 <section class="w3l-breadcrumb">
   <div class="breadcrum-bg py-sm-5 py-4">
       <div class="container py-lg-3">
-          <h2>Les meilleurs services de tourisme </h2>
+          <h2>Les services de location disponible  </h2>
       </div>
     </div>
     <br><div class="container">

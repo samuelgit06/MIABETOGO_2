@@ -47,33 +47,11 @@ pas de logement disponible
           <h2>Les meilleurs services de tourisme </h2>
       </div>
     </div><br>
-  
-    {{-- @foreach ($eta as $etablissement  )
-    <div class="card mb-3" style="width:100% ">
-      <div class="form-group" style="background-color:aliceblue;">
-        <div class="form-group" style="background-color:aliceblue;">
-          <div class="col-md-6">
-              <img style="height:50%; width:50%; border-radius:15px;" src= "images/{{$etablissement->images}}"class="card-img-top" alt="...">
-            </div>
-        </div>
-        <div class="col-md-6>
-          <div class="card-body">
-            <h5 class="card-title">{{$etablissement->Nom}}</h5>
-            <p class="card-text">{{$etablissement->Desc_eta}}</p>
-            <p class="card-text"><small class="text-muted">Telephone :{{$etablissement->num_etablissment}}</small></p>
-            <p class="card-text"><small class="text-muted">Prix Maximum :{{$etablissement->prix_max}}</small></p>
-            <p class="card-text"><small class="text-muted">Prix Minimum :{{$etablissement->prix_min}}</small></p>
-            <a {{$etablissement->lien_web_eta}} class="card-link">vister le site web </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    @endforeach --}}
-  <br><div class="container">
-    <div class="row">
-
-      @foreach ($eta as $etablissement  ) 
-        <div class="col-lg-4 col-sm-2" style="background-color:ghostwhite;">
+    <div class="container">
+      <div class="row"> 
+      @foreach ($eta as $etablissement  )
+      
+        <div class="col-lg-4 col-sm-4" style="background-color:ghostwhite;">
           <div class="recipe-item">
               <p><img src="images/{{$etablissement->images}}" alt="image"></p>
               <div style="text-align:left; color:black;" class="form-group"><br>
@@ -95,10 +73,11 @@ pas de logement disponible
                 <i class="note">Note:</i>
               </div>
           </div>
+        @endforeach
+
       </div><br>
     <div>
     
-      @endforeach
   </div>
   </div><br>
 

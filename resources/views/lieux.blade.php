@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+   <!--<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">-->
    <link rel="stylesheet" href="css/style.css" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main2.css" />
@@ -82,7 +82,7 @@
                     <div class="col-md-12">
                         <div class="product-filters">
                             <ul>
-                                <li   data-filter=".lemon3" class="active">Region martime</li>
+                                <li   data-filter=".lemon3" class="active" > martime</li>
                                 <li  data-filter=".berry">Region des plateaux</li>
                                 <li  data-filter=".berry2">Region des savanes</li>
                                 <li data-filter=".lemon">Region de la Kara</li>
@@ -92,7 +92,7 @@
                     </div>
                   </div>
        </section>
-       <section>
+    <!-- <section>
        <section>
         <section  style="margin-left: 170px ">            
           <div class="row product-lists">
@@ -108,36 +108,13 @@
                                       <div class="form-inner-cont">
                                         <br><div class="container">
                                           <div class="row">     
-                                                <form action="{{ route('regionMa') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
-                                                  @csrf
-                                                  @foreach ($lieux as $lieu  ) 
-          <div class="col-lg-4 col-sm-2" style="background-color:ghostwhite;">
-            <div class="recipe-item">
-                <p><img src="images/{{$lieu->images}}" alt="image"></p>
-                <div style="text-align:left; color:black;" class="form-group"><br>
-                    
-                    <br><a>
-                        <h3 style="color:rgb(255, 106, 0); font-weight:550; text-style:justify;">{{$lieu->Nom}}</h3>
-                    </a>
-                    <p style="font-family: arial; font-size:16px; color:black;">{{$lieu->Desc_Lieux}}</p>
-                    <p style="font-family: arial; font-size:16px; color:black;">{{$lieu->local_eta}}</p>
-                
-                    <p style="font-family: roboto; font-size:16px;"><u>Prix par personne</u> : {{$lieu->prix}}</p>
-                           
-                  <br></div>
-                  <i class="star" data-note="1">&#9733;</i>
-                <i class="star" data-note="2">&#9733;</i>
-                <i class="star" data-note="3">&#9733;</i>
-                <i class="star" data-note="4">&#9733;</i>
-                <i class="star" data-note="5">&#9733;</i>
-                <i class="note">Note:</i>
-            </div>
-        </div><br>
-        @endforeach
-                                              </form>
-                                                  </div>
+                                                {{-- <form action="action="{{ route('regionMa') }}" " method="GET" class="signin-form"  enctype="multipart/form-data"> --}}
                                                  
-                                                </div>
+                                                  
+                                                </form>
+                                              </div>
+                                                 
+                                            </div>
                                       </div>
                                   </div>
                             </section>
@@ -161,7 +138,7 @@
                                   <div class="form-right">
                                       <div class="form-inner-cont">
                                                     
-                                                <form action="{{ route('LieuxController.regionPla') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                {{-- <form action="{{ route('LieuxController.regionPla') }}" method="GET" class="signin-form"  enctype="multipart/form-data"> --}}
                                                  
                                               </form>
                                                   </div>
@@ -219,7 +196,7 @@
                                   <div class="form-right">
                                       <div class="form-inner-cont">
                                                     
-                                                <form action="{{ route('LieuxController.regionCent') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                <form action="" method="GET" class="signin-form"  enctype="multipart/form-data">
                                                   
                                               </form>
                                                   </div>
@@ -248,7 +225,7 @@
                                   <div class="form-right">
                                       <div class="form-inner-cont">
                                                     
-                                                <form action="{{ route('LieuxController.regionkar') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                <form action="" method="GET" class="signin-form"  enctype="multipart/form-data">
                                                   
                                               </form>
                                                   </div>
@@ -277,7 +254,7 @@
                                   <div class="form-right">
                                       <div class="form-inner-cont">
                                                     
-                                                <form action="{{ route('LieuxController.regionSav') }}" method="GET" class="signin-form"  enctype="multipart/form-data">
+                                                <form action="" method="GET" class="signin-form"  enctype="multipart/form-data">
                                                   
                                               </form>
                                                   </div>
@@ -292,7 +269,7 @@
                         </div>
                       </section>
        </section>
-      </section>
+      </section>-->
      
 <section style="margin-top:-10em">
     <h5 class="font-semibold text-xl text-gray-800 leading-tight" style="font-family:  font-size:26px; text-align:center;">
